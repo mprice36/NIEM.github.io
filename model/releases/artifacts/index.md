@@ -7,6 +7,7 @@
   - url: /model/releases/artifacts/xml-schemas/
   - url: /model/releases/artifacts/xml-catalog/
   - url: /model/releases/artifacts/json-ld-context/
+  - url: /model/releases/artifacts/readme/
   - url: /model/releases/artifacts/model-spreadsheet/
   - url: /model/releases/artifacts/code-spreadsheet/
   - url: /model/releases/artifacts/changelog/

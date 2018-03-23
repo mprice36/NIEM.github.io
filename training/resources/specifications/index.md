@@ -1,6 +1,7 @@
 ---
   title: Introduction to NIEM Specifications
   short: Specifications
+  icon: fa-book
   description: NIEM specifications provide rules and guidance in order to facilitate consistent and well-defined information exchanges.
   links:
   - url: /training/resources/specifications/code-lists/
