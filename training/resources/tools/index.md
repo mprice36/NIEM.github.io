@@ -5,10 +5,11 @@
   description: NIEM tools provide support for reviewing NIEM content and developing NIEM domains and exchanges.
   links:
   - url: /training/resources/tools/ssgt/
-  future:
-  - url: /training/resources/tools/migration/
   - url: /training/resources/tools/movement/
   - url: /training/resources/tools/contesa/
+  - url: /training/resources/tools/migration/
+  todo:
+  - Set standard table widths for consistency
 ---
 
 {{ page.description }}

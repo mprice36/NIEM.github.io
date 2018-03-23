@@ -1,5 +1,5 @@
 
-The [Schema Subset Generator Tool (SSGT)](site.data.links.ssgt) enables users to search and explore the content of the NIEM model.  Additionally, users have the option of building XML Schema subsets of a NIEM release for use in NIEM XML exchanges.  Based on the list of components selected by the user for the subset, the tool will calculate dependencies and generate a valid set of schemas that are a subset of a release for download as a zip file.
+The [Schema Subset Generator Tool (SSGT)]({{ site.data.links.ssgt }}) enables users to search and explore the content of the NIEM model.  Additionally, users have the option of building XML Schema subsets of a NIEM release for use in NIEM XML exchanges.  Based on the list of components selected by the user for the subset, the tool will calculate dependencies and generate a valid set of schemas that are a subset of a release for download as a zip file.
 
 {:.features}
 - Search and explore the content of NIEM
