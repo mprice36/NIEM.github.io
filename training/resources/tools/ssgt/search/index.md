@@ -3,6 +3,9 @@
   short: Search
 ---
 
+- TOC
+{:toc}
+
 ## Overview
 
 The Schema Subset Generation Tool (SSGT) search function allows you to:
@@ -35,10 +38,16 @@ Change the selection in the drop-down box to change the search to:
 
 ## Advanced Searches
 
-![Advanced Search](./images/advanced-search.png)
+Click the toggle link `Show Advanced` / `Hide Advanced` to show or hide the advanced search options.
 
-- Click the toggle link Show Advanced to show advanced search options.
-- Click the toggle link Hide Advanced to hide advanced search options.
+![Advanced Search](./images/advanced-search-link.png)
+{:.bordered}
+
+Once the `Show Advanced` link has been clicked, the following options will appear:
+
+![Advanced Search](./images/advanced-search-options.png)
+{:.bordered}
+
 - Enter search terms in the text-box labeled `with the exact phrase` to search multiple terms.
 - Enter search terms in the text-box labeled `with at least one of the words` to conduct a logical OR search.
 - Enter search terms in the text-box labeled `without the words` to exclude terms from the search results.

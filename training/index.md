@@ -2,15 +2,17 @@
   title: Training
   links:
   - url: /model/
+    group: topics
+  - url: /training/resources/tools/
+    group: topics
+  - url: /training/resources/specifications/
+    group: topics
   - url: /training/domain-modeler/
+    group: tracks
   - url: /training/iepd-developer/
+    group: tracks
   - url: /training/iepd-implementer/
-  topics:
-  - url: /model/
-  tracks:
-  - url: /training/domain-modeler/
-  - url: /training/iepd-developer/
-  - url: /training/iepd-implementer/
+    group: tracks
   todo: Elaborate on intro and roles; add old training materials
 ---
 
@@ -24,14 +26,12 @@ If you are just getting started, please head over to the main site at [niem.gov]
 
 ## General topics
 
-{% include icon-list.html links=page.topics %}
+{% assign topicLinks = page.links | where: "group", "topics" %}
+{% include icon-list.html links=topicLinks %}
 
 ## Training tracks
 
 Choose from below for the kind of materials that will best fit your role in using NIEM:
 
-{% include icon-list.html links=page.links %}
-
-## Previous materials
-
-Previous training materials will be available here soon.
+{% assign trackLinks = page.links | where: "group", "tracks" %}
+{% include icon-list.html links=trackLinks %}

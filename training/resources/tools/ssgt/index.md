@@ -4,76 +4,70 @@
   description: The SSGT enables users to search and view the content of the NIEM model, and build XML Schema subsets for use in exchanges.
   links:
   - url: /training/resources/tools/ssgt/search/
+  - url: /training/resources/tools/ssgt/explore/
   - url: /training/resources/tools/ssgt/subset/
   - url: /training/resources/tools/ssgt/options/
+  todo: Move subset example snippet to subset page in the future
 ---
 
-{{ page.description }}
+- TOC
+{:toc}
+
+## Overview
 
 {% include_relative intro/index.md %}
 
+## Subset Snippet
+
+The following is a snippet showing the full declaration of type `PersonNameType` from the Core namespace in the 4.0 release:
+
+```xml
+  <xs:complexType name="PersonNameType">
+    <xs:annotation>
+      <xs:documentation>A data type for a combination of names and/or titles by which a person is known.</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="structures:ObjectType">
+        <xs:sequence>
+          <xs:element ref="nc:PersonNamePrefixText" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element ref="nc:PersonGivenName" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element ref="nc:PersonMiddleName" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element ref="nc:PersonSurName" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element ref="nc:PersonNameSuffixText" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element ref="nc:PersonMaidenName" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element ref="nc:PersonFullName" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element ref="nc:PersonNameCategoryAbstract" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element ref="nc:PersonNameSalutationText" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element ref="nc:PersonOfficialGivenName" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element ref="nc:PersonPreferredName" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element ref="nc:PersonSurNamePrefixText" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element ref="nc:PersonNameAugmentationPoint" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+        <xs:attribute ref="nc:personNameCommentText" use="optional"/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+```
+
+The following shows a corresponding snippet from a **subset** of Core.
+
 {:.note}
-> This tool does not have user accounts.  To save your work, generate a subset.  To modify the subset later, upload the wantlist from the subset.
+- In this case, only three elements from `nc:PersonNameType` were added to the subset.  Since the other elements in this type are not being used, they do not appear in this subset version of the Core schema.
+- The cardinality in this subset has also been tightened from the typically optional and over-inclusive cardinality defined in the release.  In this case, the given name and surname must and may only occur once, while the middle name is optional and may be repeated.
 
-### Tutorial
-
-- [ ] Overview
-- [ ] Search and Discovery
-  - [ ] Search Page
-  - [ ] Basic search
-    - [ ] Property
-    - [ ] Type
-    - [ ] Namespace
-    - [ ] Facet
-  - [ ] Advanced search
-  - [ ] Search results
-    - [ ] Showing Properties
-    - [ ] Showing Details
-    - [ ] Namespace page
-    - [ ] Type Page
-    - [ ] Property page
-  - [x] Options
-    - [x] Change Release
-  - [ ] Add a property to the subset
-    - [ ] Add a sub-property of a type to the subset
-    - [ ] Add all sub-properties of a type to the subset
-    - [ ] Add a type to the subset
-    - [ ] Delete a type or property from the subset
-    - [ ] Clear the subset
-    - [ ] Edit cardinality of all properties in the subset
-    - [ ] Edit cardinalities of properties in the subset
-    - [ ] Options Page
-      - [ ] Add all NIEM components to subset
-      - [ ] Generate documents
-      - [ ] Options page
-- [ ] Load wantlist
-  - [ ] Options page
-  - [ ] Download wantlist schema specification
-- [ ] Generate documents
-  - [ ] Generate subset
-  - [ ] Browsing the subset
-  - [ ] Editing contents
-
-### Outline
-
-- Overview
-- Search
-  - Advanced Search
-- Search Results
-- Subsets
-  - Individual property / type adds
-  - Add property to type
-  - Cardinality
-  - Nillable
-  - Dependencies
-- Wantlists
-- Options
-- Generate
-- API
-
-The Schema Subset Generation Tool (SSGT) enables users to search and explore content from NIEM releases.   
-presents the schema designer with an interface that permits searching through the National Information Exchange Model (NIEM) for desired types and properties by substrings in names, definitions, and other fields of NIEM. 
-
-When appropriate types or properties are found, the user may select them for inclusion in a schema subset. SSGT applies the appropriate rules and automatically includes any types and elements that the user selections depend on. The designer does not have to manage subsetting rules or dependencies. 
-
-After selecting all of the desired types and properties, the designer can generate the schema subset. The result is a zip archive file containing the relevant, valid subset schemas derived from the NIEM reference schemas and any referenced code list schemas. The [zip] archive directory structure and file placement is arranged automatically.
+```xml
+  <xs:complexType name="PersonNameType">
+    <xs:annotation>
+      <xs:documentation>A data type for a combination of names and/or titles by which a person is known.</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="structures:ObjectType">
+        <xs:sequence>
+          <xs:element ref="nc:PersonGivenName" minOccurs="1" maxOccurs="1"/>
+          <xs:element ref="nc:PersonMiddleName" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element ref="nc:PersonSurName" minOccurs="1" maxOccurs="1"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+```
