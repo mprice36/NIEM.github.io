@@ -85,17 +85,69 @@ must reference a valid set of NIEM compliant schemas:
 To that end, let's first create a NIEM compliant XSD document and then
 use that document to generate a conformant XML instance document.
 
+### A simple NIEM XSD
 
-## Step 2: Upload to ConTesA
-----------------------------
-We are borg.
+Let's create an XML Schema that is NIEM compliant. We know that the schema
+must reference NIEM and the document has to have appropriate naming as
+per the NIEM NDR.
 
+With your favorite text editor, create a file called simple_schema.xsd
+containing the following text:
 
-## Step 3: Review the Conformance Report
-----------------------------------------
-I broke the rules...
+<figure>
+<figcaption><b>File: <i>simple_schema.xsd</i></b></figcaption>
+{% highlight xml %}
+<?xml version="1.0" encoding="US-ASCII"?>
+<xs:schema version="1" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  targetNamespace="http://release.niem.gov/niem/niem-core/4.0/"
+  xsi:schemaLocation="http://release.niem.gov/niem/appinfo/4.0/ ../../utility/appinfo/4.0/appinfo.xsd http://release.niem.gov/niem/conformanceTargets/3.0/ ../../utility/conformanceTargets/3.0/conformanceTargets.xsd"
+  xmlns:nc="http://release.niem.gov/niem/niem-core/4.0/"
+  xmlns:appinfo="http://release.niem.gov/niem/appinfo/4.0/"
+  xmlns:ct="http://release.niem.gov/niem/conformanceTargets/3.0/"
+  xmlns:structures="http://release.niem.gov/niem/structures/4.0/"
+  xmlns:niem-xs="http://release.niem.gov/niem/proxy/xsd/4.0/"
+  ct:conformanceTargets="http://reference.niem.gov/niem/specification/naming-and-design-rules/4.0/#ReferenceSchemaDocument">
 
+  <xs:annotation>
+    <xs:documentation>A NIEM Conformant XSD</xs:documentation>
+  </xs:annotation>
 
-## Next Steps...
-----------------
-Get a job...
+  <xs:import schemaLocation="../../proxy/xsd/4.0/xs.xsd" namespace="http://release.niem.gov/niem/proxy/xsd/4.0/"/>
+  <xs:import schemaLocation="../../utility/structures/4.0/structures.xsd" namespace="http://release.niem.gov/niem/structures/4.0/"/>
+
+  <xs:element name="PersonSurName" type="nc:PersonNameTextType" nillable="true">
+    <xs:annotation>
+      <xs:documentation>A last name or family name of a person.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+
+  <xs:complexType name="PersonNameTextType">
+    <xs:annotation>
+      <xs:documentation>A data type for a name by which a person is known, referred, or addressed.</xs:documentation>
+    </xs:annotation>
+    <xs:simpleContent>
+      <xs:extension base="nc:ProperNameTextType"/>
+    </xs:simpleContent>
+  </xs:complexType>
+
+  <xs:complexType name="ProperNameTextType">
+    <xs:annotation>
+      <xs:documentation>A data type for a word or phrase by which a person or thing is known, referred, or addressed.</xs:documentation>
+    </xs:annotation>
+    <xs:simpleContent>
+      <xs:extension base="nc:TextType"/>
+    </xs:simpleContent>
+  </xs:complexType>
+
+  <xs:complexType name="TextType">
+    <xs:annotation>
+      <xs:documentation>A data type for a character string.</xs:documentation>
+    </xs:annotation>
+    <xs:simpleContent>
+      <xs:extension base="niem-xs:string"/>
+    </xs:simpleContent>
+  </xs:complexType>
+</xs:schema>
+{% endhighlight %}
+</figure>
