@@ -122,3 +122,22 @@ adhere to those rules:
 {% include_relative assets/niemish_person_name_instance.xml %}
 {% endhighlight %}
 </figure>
+
+### NIEM: The Full Monty
+
+NIEM actually provides a fully realized "Person Name" data model. Let's look at
+how NIEM implements *PersonName* in NIEM 4.0:
+
+<figure>
+<figcaption><b>File: <i>niem_person_name.xsd</i></b></figcaption>
+{% highlight xml %}
+{% include_relative assets/niem_person_name.xsd %}
+{% endhighlight %}
+</figure>
+
+<figure>
+<figcaption><b>File: <i>niem_person_name_instance.xml</i></b></figcaption>
+{% highlight xml %}
+{% include_relative assets/niem_person_name_instance.xml %}
+{% endhighlight %}
+</figure>

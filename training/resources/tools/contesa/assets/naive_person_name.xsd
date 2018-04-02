@@ -1,8 +1,6 @@
 <?xml version="1.0"?>
-<xs:schema
- xmlns:xs="http://www.w3.org/2001/XMLSchema"
- xmlns="http://release.niem.gov/niem/contesa/tutorial"
- targetNamespace="http://release.niem.gov/niem/contesa/tutorial"
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+ targetNamespace="contesa:tutorial" xmlns:tutorial="contesa:tutorial"
  elementFormDefault="qualified">
 
   <xs:element name="PersonName">

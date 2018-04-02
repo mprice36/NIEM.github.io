@@ -1,8 +1,7 @@
 <?xml version="1.0"?>
-<PersonName
- xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
- xmlns="http://release.niem.gov/niem/contesa/tutorial"
- xsi:schemaLocation="http://release.niem.gov/niem/contesa/tutorial naive_person_name.xsd">
+<PersonName xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://release.niem.gov/niem/contesa/tutorial naive_person_name.xsd"
+ xmlns="contesa:tutorial">
  
   <PersonGivenName>John</PersonGivenName>
   <PersonSurName>Snow</PersonSurName>
