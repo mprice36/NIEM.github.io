@@ -41,6 +41,7 @@ niem_comments_link: mailto:niem-comments@lists.gatech.edu
 # Build settings
 markdown: kramdown
 highlighter: rouge
+incremental: true
 
 kramdown:
   input: GFM
