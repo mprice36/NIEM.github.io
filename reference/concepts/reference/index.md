@@ -3,9 +3,9 @@
   description: A reference is used to link to content defined elsewhere.
   icon: fa-share
   links:
-  - url: /model/concepts/reference/modeling/
-  - url: /model/concepts/reference/xml/
-  - url: /model/concepts/reference/json/
+  - url: /reference/concepts/reference/modeling/
+  - url: /reference/concepts/reference/xml/
+  - url: /reference/concepts/reference/json/
 ---
 
 - TOC

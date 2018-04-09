@@ -3,12 +3,12 @@
   icon: fa-sitemap
   description: A type represents a data structure that defines a set of allowable values.
   links:
-    - url: /model/concepts/type/modeling/
-    - url: /model/concepts/type/ccc/
+    - url: /reference/concepts/type/modeling/
+    - url: /reference/concepts/type/ccc/
       group: kind
-    - url: /model/concepts/type/csc/
+    - url: /reference/concepts/type/csc/
       group: kind
-    - url: /model/concepts/type/simple/
+    - url: /reference/concepts/type/simple/
       group: kind
 ---
 

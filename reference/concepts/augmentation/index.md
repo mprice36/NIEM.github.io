@@ -3,8 +3,8 @@
   icon: fa-plus
   description: An augmentation is a mechanism to add additional local content to NIEM types defined in other namespaces.
   links:
-    - url: /model/concepts/augmentation/point/
-    - url: /model/concepts/augmentation/element/
+    - url: /reference/concepts/augmentation/point/
+    - url: /reference/concepts/augmentation/element/
 ---
 
 - TOC

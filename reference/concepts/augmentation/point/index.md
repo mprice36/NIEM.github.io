@@ -2,9 +2,9 @@
   title: Augmentation Points
   icon: fa-share
   links:
-    - url: /model/concepts/augmentation/point/modeling/
-    - url: /model/concepts/augmentation/point/xml/
-    - url: /model/concepts/augmentation/point/json/
+    - url: /reference/concepts/augmentation/point/modeling/
+    - url: /reference/concepts/augmentation/point/xml/
+    - url: /reference/concepts/augmentation/point/json/
   description: An augmentation point is a special substitution group to allow for later replacement by additional content from other namespaces.
 ---
 

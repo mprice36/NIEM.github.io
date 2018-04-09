@@ -3,9 +3,9 @@
   icon: fa-info
   description: Metadata is a set of data that describes characteristics of other data.
   links:
-    - url: /model/concepts/metadata/modeling/
-    - url: /model/concepts/metadata/xml/
-    - url: /model/concepts/metadata/json/
+    - url: /reference/concepts/metadata/modeling/
+    - url: /reference/concepts/metadata/xml/
+    - url: /reference/concepts/metadata/json/
 ---
 
 - TOC

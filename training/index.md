@@ -1,7 +1,7 @@
 ---
   title: Training
   links:
-  - url: /model/
+  - url: /reference/
     group: topics
   - url: /training/resources/tools/
     group: topics

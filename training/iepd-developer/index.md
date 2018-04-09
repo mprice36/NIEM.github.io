@@ -3,7 +3,7 @@
   icon: fa-envelope-o
   description: An IEPD developer designs and manages the specification of an information exchange.
   links:
-  - url: /model/
+  - url: /reference/
     newtab: true
   - url: /iepd-starter-kit/
     newtab: true

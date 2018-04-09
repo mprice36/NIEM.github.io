@@ -3,9 +3,9 @@
   icon: fa-at
   description: An attribute is a property that may carry a simple value only.
   links:
-  - url: /model/concepts/property/attribute/modeling/
-  - url: /model/concepts/property/attribute/xml/
-  - url: /model/concepts/property/attribute/json/
+  - url: /reference/concepts/property/attribute/modeling/
+  - url: /reference/concepts/property/attribute/xml/
+  - url: /reference/concepts/property/attribute/json/
 ---
 
 - TOC

@@ -3,9 +3,9 @@
   icon: fa-code
   description: A complex type with simple content (CSC) is a structure that represents a simple value and that may optionally contain attributes.
   links:
-  - url: /model/concepts/type/csc/modeling/
-  - url: /model/concepts/type/csc/xml/
-  - url: /model/concepts/type/csc/json/
+  - url: /reference/concepts/type/csc/modeling/
+  - url: /reference/concepts/type/csc/xml/
+  - url: /reference/concepts/type/csc/json/
 ---
 
 {% include_relative intro/index.md %}

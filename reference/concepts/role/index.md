@@ -3,9 +3,9 @@
   icon: fa-sitemap
   description: A role is a function or responsibility of someone or something.
   links:
-  - url: /model/concepts/role/modeling/
-  - url: /model/concepts/role/xml/
-  - url: /model/concepts/role/json/
+  - url: /reference/concepts/role/modeling/
+  - url: /reference/concepts/role/xml/
+  - url: /reference/concepts/role/json/
 ---
 
 - TOC

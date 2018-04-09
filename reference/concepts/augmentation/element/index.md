@@ -3,10 +3,10 @@
   icon: fa-retweet
   description: An augmentation element is additional content that replaces an augmentation point defined in another namespace.
   links:
-    - url: /model/concepts/augmentation/element/modeling/
-    - url: /model/concepts/augmentation/element/xml-container/
-    - url: /model/concepts/augmentation/element/xml-direct/
-    - url: /model/concepts/augmentation/element/json/
+    - url: /reference/concepts/augmentation/element/modeling/
+    - url: /reference/concepts/augmentation/element/xml-container/
+    - url: /reference/concepts/augmentation/element/xml-direct/
+    - url: /reference/concepts/augmentation/element/json/
 ---
 
 - TOC

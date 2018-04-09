@@ -3,9 +3,9 @@
   icon: fa-book
   description: Local terminology is a word, phrase, abbreviation, acronym, jargon, or other string of characters specially documented in a namespace because no definition or literal exists in a standard dictionary.
   links:
-    - url: /model/concepts/local-term/modeling/
-    - url: /model/concepts/local-term/xml/
-    - url: /model/concepts/local-term/json/
+    - url: /reference/concepts/local-term/modeling/
+    - url: /reference/concepts/local-term/xml/
+    - url: /reference/concepts/local-term/json/
 ---
 
 {% include_relative intro/index.md %}

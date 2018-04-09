@@ -3,12 +3,12 @@
   icon: fa-files-o
   description: A release is a set of schemas and supporting artifacts.
   links:
-  - url: /model/releases/development/
-  - url: /model/releases/core-supplement/
-  - url: /model/releases/location/
-  - url: /model/releases/artifacts/
-  - url: /model/releases/history/
-  - url: /model/releases/stats/
+  - url: /reference/releases/development/
+  - url: /reference/releases/core-supplement/
+  - url: /reference/releases/location/
+  - url: /reference/releases/artifacts/
+  - url: /reference/releases/history/
+  - url: /reference/releases/stats/
   todo: Release section
 ---
 

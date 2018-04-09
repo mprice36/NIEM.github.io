@@ -4,7 +4,7 @@
   icon: fa-history
   description: A timeline of NIEM releases and significant features.
   links:
-  - url: /model/releases/history/domain/
+  - url: /reference/releases/history/domain/
 ---
 
 <table>

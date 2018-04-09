@@ -2,9 +2,9 @@
   title: Facets
   icon: fa-list
   links:
-    - url: /model/concepts/facet/modeling/
-    - url: /model/concepts/facet/xml/
-    - url: /model/concepts/facet/json/
+    - url: /reference/concepts/facet/modeling/
+    - url: /reference/concepts/facet/xml/
+    - url: /reference/concepts/facet/json/
   description: A facet is a constraint on a simple type that limits the set of allowable values.
 ---
 

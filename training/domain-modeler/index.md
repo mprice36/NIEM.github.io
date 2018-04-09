@@ -3,7 +3,7 @@
   icon: fa-book
   description: A domain modeler creates and manages the content in a NIEM domain.
   links:
-  - url: /model/
+  - url: /reference/
     newtab: true
   - url: /tips-and-tricks/domain-modeling-guide/
     newtab: true

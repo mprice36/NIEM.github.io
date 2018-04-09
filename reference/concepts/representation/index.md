@@ -4,10 +4,10 @@
   icon: fa-tags
   description: The representation pattern is a mechanism to support multiple representations of a concept, along with additional properties.
   links:
-  - url: /model/concepts/representation/modeling/
-  - url: /model/concepts/representation/country-codes/
-  - url: /model/concepts/representation/xml/
-  - url: /model/concepts/representation/json/
+  - url: /reference/concepts/representation/modeling/
+  - url: /reference/concepts/representation/country-codes/
+  - url: /reference/concepts/representation/xml/
+  - url: /reference/concepts/representation/json/
 ---
 
 - TOC

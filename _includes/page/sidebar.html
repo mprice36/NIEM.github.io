@@ -40,14 +40,14 @@
 
 
     {% comment %} TODO: Do not hard code the exclusion {% endcomment %}
-    {% unless thisPage.url contains "/model/content/codes/" %}
+    {% unless thisPage.url contains "/reference/content/codes/" %}
       {% include page/sidebar-list.html url=page.url class="sub" %}
     {% endunless %}
 
   {% else %}
     
     {% comment %} List Current Page with Siblings {% endcomment %}
-    {% unless thisPage.url contains "/model/content/codes/" %}
+    {% unless thisPage.url contains "/reference/content/codes/" %}
     
       {% capture parentURL %}
         {% include functions/getParentURL.html url=page.url %}

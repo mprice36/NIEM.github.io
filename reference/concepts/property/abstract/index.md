@@ -3,9 +3,9 @@
   icon: fa-ellipsis-h
   description: An abstract element is an element defined as a placeholder in a schema that must be replaced with an appropriate substitution in an instance.
   links:
-  - url: /model/concepts/property/abstract/modeling/
-  - url: /model/concepts/property/abstract/xml/
-  - url: /model/concepts/property/abstract/json/
+  - url: /reference/concepts/property/abstract/modeling/
+  - url: /reference/concepts/property/abstract/xml/
+  - url: /reference/concepts/property/abstract/json/
 ---
 
 - TOC

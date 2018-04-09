@@ -1,9 +1,9 @@
 ---
   title: Modeling Properties
   links:
-  - url: /model/concepts/property/modeling/names/
-  - url: /model/concepts/property/modeling/definitions/
-  - url: /model/concepts/property/modeling/table/
+  - url: /reference/concepts/property/modeling/names/
+  - url: /reference/concepts/property/modeling/definitions/
+  - url: /reference/concepts/property/modeling/table/
   ndr:
     rules:
     - number: 7-5

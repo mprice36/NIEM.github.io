@@ -3,11 +3,11 @@
   icon: fa-lightbulb-o
   description: A property represents a concept, idea, or thing.
   links:
-    - url: /model/concepts/property/modeling/
-    - url: /model/concepts/property/element/
-    - url: /model/concepts/property/abstract/
-    - url: /model/concepts/property/substitutable/
-    - url: /model/concepts/property/attribute/
+    - url: /reference/concepts/property/modeling/
+    - url: /reference/concepts/property/element/
+    - url: /reference/concepts/property/abstract/
+    - url: /reference/concepts/property/substitutable/
+    - url: /reference/concepts/property/attribute/
 ---
 
 - TOC

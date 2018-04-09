@@ -3,9 +3,9 @@
   icon: fa-files-o
   description: A namespace is a collection of properties and types, managed by a common authoritative source.
   links:
-    - url: /model/concepts/namespace/modeling/
-    - url: /model/concepts/namespace/xml/
-    - url: /model/concepts/namespace/json/
+    - url: /reference/concepts/namespace/modeling/
+    - url: /reference/concepts/namespace/xml/
+    - url: /reference/concepts/namespace/json/
 ---
 
 - TOC

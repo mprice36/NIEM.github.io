@@ -1,31 +1,31 @@
 ---
-  title: Concepts
+  title: Model Concepts
   icon: fa-cog
   description: This section describes the building blocks used to construct the model.
   links:
-  - url: /model/concepts/namespace/
+  - url: /reference/concepts/namespace/
     group: Basics
-  - url: /model/concepts/property/
+  - url: /reference/concepts/property/
     group: Basics
-  - url: /model/concepts/type/
+  - url: /reference/concepts/type/
     group: Basics
-  - url: /model/concepts/facet/
+  - url: /reference/concepts/facet/
     group: Basics
-  - url: /model/concepts/adapter/
+  - url: /reference/concepts/adapter/
     group: Advanced
-  - url: /model/concepts/association/
+  - url: /reference/concepts/association/
     group: Advanced
-  - url: /model/concepts/augmentation/
+  - url: /reference/concepts/augmentation/
     group: Advanced
-  - url: /model/concepts/local-term/
+  - url: /reference/concepts/local-term/
     group: Advanced
-  - url: /model/concepts/metadata/
+  - url: /reference/concepts/metadata/
     group: Advanced
-  - url: /model/concepts/reference/
+  - url: /reference/concepts/reference/
     group: Advanced
-  - url: /model/concepts/representation/
+  - url: /reference/concepts/representation/
     group: Advanced
-  - url: /model/concepts/role/
+  - url: /reference/concepts/role/
     group: Advanced
 ---
 

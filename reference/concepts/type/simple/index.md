@@ -3,12 +3,12 @@
   icon: fa-square
   description: A simple type is a structure that represents a simple value only.
   links:
-    - url: /model/concepts/type/simple/modeling/
-    - url: /model/concepts/type/simple/xml/
-    - url: /model/concepts/type/simple/json/
-    - url: /model/concepts/type/simple/list/
+    - url: /reference/concepts/type/simple/modeling/
+    - url: /reference/concepts/type/simple/xml/
+    - url: /reference/concepts/type/simple/json/
+    - url: /reference/concepts/type/simple/list/
       group: kind
-    - url: /model/concepts/type/simple/union/
+    - url: /reference/concepts/type/simple/union/
       group: kind
 ---
 

@@ -1,11 +1,11 @@
 ---
-  title: The Model
+  title: Reference
   icon: fa-sitemap
-  description: Learn about the NIEM data model, including the conceptual building blocks, the content, and releases.
+  description: Learn about NIEM topics.
   links:
-    - url: /model/concepts/
-    - url: /model/content/
-    - url: /model/releases/
+    - url: /reference/concepts/
+    - url: /reference/content/
+    - url: /reference/releases/
 ---
 
 NIEM is a data model that defines many reusable components and rules for building local extensions.  The purpose for this is to be able to create information exchanges with clear semantics and a higher degree of consistency across the community.

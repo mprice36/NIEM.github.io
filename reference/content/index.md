@@ -3,8 +3,8 @@
   icon: fa-sitemap
   description: A high-level introduction to the content in the model.
   links:
-  - url: /model/content/common-terms/
-  - url: /model/content/codes/
+  - url: /reference/content/common-terms/
+  - url: /reference/content/codes/
 ---
 
 - TOC

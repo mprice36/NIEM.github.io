@@ -12,8 +12,8 @@
 
 ## The Basics
 
-{% include page/intros.html url="/model/concepts/" group="Basics" %}
+{% include page/intros.html url="/reference/concepts/" group="Basics" %}
 
 ## Advanced
 
-{% include page/intros.html url="/model/concepts/" group="Advanced" %}
+{% include page/intros.html url="/reference/concepts/" group="Advanced" %}
