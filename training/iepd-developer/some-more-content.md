@@ -1,7 +1,9 @@
-## Here is a header level 2 for this content
+# Stub for included file
 
 This is some body text for this header
 
-## Another header
+## Another header for included file
 
 Yet more content
+
+![tooltip text](exp01.png "VERY Fancy Title")

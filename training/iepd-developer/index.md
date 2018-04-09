@@ -20,6 +20,14 @@
 
 # Build and Validate an IEPD
 
+## Objective
+
+This topic will help you to do the following:
+
+- Create a mapping document and map your exchange data elements to the NIEM data model.
+- Generate XML Schemas and other XML documents using NIEM tools.
+- Validate XML Schemas to ensure NIEM Conformance.
+
 ## IEPD Lifecycle
 
 - Scenario Planning
@@ -31,7 +39,7 @@
 - Map and Model
 
     During the Map and Model phase, you create an exchange content model based on your information exchange requirements. The Exchange Content Model is then mapped to the NIEM data model.
-- Build and Validate
+- Build and Validate (this module)
 
     During the Build and Validate phase, you create a set of exchange-specific, NIEM-conformant XML schemas that implement the exchange content model created for the exchange.
 - Assemble and Document
@@ -40,14 +48,6 @@
 - Publish and Implement
 
     During the last phase, the Publish and Implement phase, you implement the IEPD into production and publish the IEPD for search, discovery, and reuse.
-
-## Objective
-
-This topic will help you to do the following:
-
-- Create a mapping document and map your exchange data elements to the NIEM data model.
-- Generate XML Schemas and other XML documents using NIEM tools.
-- Validate XML Schemas to ensure NIEM Conformance .
 
 ## Define an Exchange Content Model
 
@@ -187,3 +187,62 @@ The master document, catalog, change log, and sample XML instances are all requi
 For the Publish and Implement phase, while no artifacts are required, you should publish the IEPD for search, discovery, and reuse, as well as implement the exchange.
 
 As a best practice, include many of the artifacts listed here, not just the required ones.
+
+### Maintain an Exchange
+
+To maintain an IEPD, keep in mind the following:
+
+- Ensure that any changes to an information exchange are correctly reflected within the IEPD.
+
+- Establish a governance process within the organization to actively manage changes made to IEPDs. A governance process controls and prioritizes changes to information exchanges. The lack of a governance process can lead to problems related to multiple versions of an IEPD and a lack of awareness of changes that were implemented.
+
+- Since the IEPD may be reused, it is critical to update IEPDs as changes are made. The change log and documentation within an IEPD should be updated whenever changes are made.
+
+- When changes are made to an IEPD, publish the new version to the repository.
+
+- Choosing to not maintain an IEPD inhibits reuse within and outside the organization.
+
+## IEPD Content
+
+### Mapping Documents in IEPD Development
+
+#### Mapping Document
+
+Mapping Documents are an important part of IEPD development. The Mapping Document is a document that identifies how exchange data aligns to, or "maps," and reuses NIEM data objects.
+
+- It demonstrates how data within an exchange map to data objects in NIEM by documenting the degree of similarity.
+
+- It aids in the identification process of objects that are not currently within NIEM and are candidates for inclusion in an Extension Schema, and potentially in NIEM in the future.
+
+- It helps communicate the level of reuse in NIEM to business users/owners.
+
+A mapping document can also be referred to as a Component Mapping Template, a Component Mapping Tool, or a Component Mapping Spreadsheet.
+
+The mapping document is an effective tool for documenting how the NIEM data model was reused. A template is available for use on NIEM.gov.
+
+The mapping document is a tool used to bridge the gap between exchange data and how that exchange data is represented in NIEM. The mapping document also identifies all objects from the exchange content model to determine where NIEM reuse can occur or where NIEM requires extension.
+
+#### Mapping Document Example
+
+![tooltip text](exp02.png "Mapping Document Example")
+
+Mapping Documents are commonly referred to as Component Mapping Templates (CMTs) and utilize spreadsheets with a common set of columns. Below is an example of a CMT, which is being used to document exchange to NIEM alignment.
+The Source Data Columns describe the locally defined data that will be mapped to NIEM. This information was probably recorded when the Exchange Content Model was being built. Depending on the exchange, it is likely that each exchange partner will have different information for these columns with the end goal of all showing NIEM alignment. 
+The Mapping Column documents the alignment of the “Source Data” and “NIEM Data.” This “mapping value” will aid in the decision to place which XML elements and types in which XML Schemas.
+The NIEM Data Columns document the NIEM data objects to be reused in the IEPD’s XML schema. This means that for these cases, the NIEM element and type names will be used.
+Note:
+These or similar columns are the most commonly used for mapping documents. One of the goals of creating IEPDs is to promote reusability, and the more documentation available, the easier reuse becomes; therefore, more information is always helpful.
+
+#### Exchange Content Model
+
+As a data modeling tool, the Exchange Content Model should identify all of the data necessary for an exchange.  Objects in the exchange content model are represented in the Mapping Document. Associations and cardinality are not typically represented, but certainly can be, in the Mapping Document. You do not have to explicitly use data objects from the NIEM data dictionary, especially when depicting extension elements.
+
+#### XML Schemas
+
+After completing a Mapping Document, elements and types can be identified for inclusion in NIEM subset schemas or extension. Additionally, if a "container" data object (complex XML element) in NIEM is reused, the object will not be able to hold character data.
+
+- Its Purpose
+
+- The purpose and components of source data, NIEM data, and mapping columns
+
+### The Mapping Process
