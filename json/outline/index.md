@@ -11,33 +11,35 @@ guidance.
 - [This page: outline](.): A version of the outline, which links to all
   the pages in the JSON guidance, summarizes what they're about, and describes why
 
-- [data](../data): Overview of JSON Data
-    - Simple flat JSON
-    - "FName" etc
-    - Order of keys not significant
-    - values:
-        - objects
-            - keys & values
-        - text
-        - names
-        - arrays
-        - numbers
-        - booleans & null
+- [NIEM and JSON Frequently Asked Questions](../faq): Explains what NIEM and JSON each are
+and do and why they are useful together.
+  - [What is NIEM?](../whatis): Describes the NIEM organization, its
+  processes, and specifications
+  
+  - [Why use NIEM?](../whyuse): Problems that NIEM addresses, and people
+  likely to have those problems
 
-- [names](../names): Names for data
+  - [What is NIEM JSON data?](../data) JSON-LD plus conceptual model plus
+  content model
+    - [plain JSON](../data/simple): Overview of JSON Data
+
+^
+- [A reference on NIEM and JSON](../reference): Provides normative and
+ non-normative guidance on how NIEM and JSON are used, including examples.
+  - [names](../names): Names for data
     - [names/reuse](../names/reuse): Reuse of names and definitions
     - [names/syntax](../names/syntax): Descriptive naming
-        - including names based on ISO-11179 
+      - including names based on ISO-11179 
     - [names/namespaces](../names/namespaces): Domain-based naming (NIEM domains)
-- [json-ld](../json-ld): JSON-LD
-    - [json-ld/context](../json-ld/context): JSON-LD contexts for namespaces and short names
-    - [json-ld/identifiers](../json-ld/identifiers): Identifiers in JSON-LD: use of `@id`, URIs, and names
+    - [json-ld](../json-ld): JSON-LD
+      - [json-ld/context](../json-ld/context): JSON-LD contexts for namespaces and short names
+      - [json-ld/identifiers](../json-ld/identifiers): Identifiers in JSON-LD: use of `@id`, URIs, and names
       of individuals
-    - json-ld/syntax: Syntax of objects and arrays: JSON-LD allows for flexible
+      - json-ld/syntax: Syntax of objects and arrays: JSON-LD allows for flexible
       representation, and compaction and expansion can create or suppress the
       appearance of arrays and objects.
-    - [json-ld/expanded](../json-ld/expanded): An example of JSON-LD expansion.
-    - [json-ld/processing](../json-ld/processing): Processing JSON-LD using
+      - [json-ld/expanded](../json-ld/expanded): An example of JSON-LD expansion.
+      - [json-ld/processing](../json-ld/processing): Processing JSON-LD using
       standard operations, including expansion, compaction, contexts, and
       optional use of arrays
                     
@@ -52,14 +54,14 @@ INSTANCES ONLY ABOVE HERE. NO CLASSES ABOVE HERE
         - IEPD vs IEP
         - categories vs. individuals
         - templates vs. instances
-    - models/reuse: Reusable data definitions
+    - [models/reuse](/model/concepts/property): Reusable data definitions
         - classes & properties
         - global data definitions
-    - models/has-a: Hierarchical models
+    - [models/has-a](/model/concepts/type): Hierarchical models
         - Hierarchical models 
         - JSON properties
         - Cardinality (minItems, maxItems)
-    - models/releases: The NIEM model
+    - [models/releases](/model/releases): The NIEM model
         - Spreadsheets
         - Movement
         - XML Schemas
@@ -86,7 +88,7 @@ NO JSON SCHEMA ABOVE HERE
 
 <hr/>
 
-- [json-schema](../schema)
+- [json-schema](../json-schema)
     - [In-schema references](../json-schema/references) (JSON identifiers)
         - not really references
         - URIs
@@ -98,7 +100,7 @@ NO JSON SCHEMA ABOVE HERE
     - XML details
     - XSD details
     - augmentations
-- exchange-specification
+- [exchange-specification](/iepd-starter-kit)
     - How to specify an exchange for JSON
     - Determine business data content
     - Specify JSON representation of content
