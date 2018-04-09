@@ -1,10 +1,9 @@
 ---
-  title: Introduction to NIEM Specifications
-  short: Specifications
+  title: Specifications
   icon: fa-book
   description: NIEM specifications provide rules and guidance in order to facilitate consistent and well-defined information exchanges.
   links:
-  - url: /training/resources/specifications/code-lists/
+  - url: /reference/specifications/code-lists/
   todo:
   - NDR
   - Conformance
@@ -18,4 +17,4 @@
 
 {{ page.description }}
 
-{% include page/intros.html url="/training/resources/specifications/" %}
+{% include page/intros.html url="/reference/specifications/" %}

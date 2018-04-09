@@ -1,11 +1,15 @@
 ---
   title: Training
   links:
-  - url: /reference/
+  - url: /reference/concepts/
     group: topics
-  - url: /training/resources/tools/
+  - url: /reference/content/
     group: topics
-  - url: /training/resources/specifications/
+  - url: /reference/releases/
+    group: topics
+  - url: /reference/tools/
+    group: topics
+  - url: /reference/specifications/
     group: topics
   - url: /training/domain-modeler/
     group: tracks

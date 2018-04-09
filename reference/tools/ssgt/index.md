@@ -3,10 +3,10 @@
   short: SSGT
   description: The SSGT enables users to search and view the content of the NIEM model, and build XML Schema subsets for use in exchanges.
   links:
-  - url: /training/resources/tools/ssgt/search/
-  - url: /training/resources/tools/ssgt/explore/
-  - url: /training/resources/tools/ssgt/subset/
-  - url: /training/resources/tools/ssgt/options/
+  - url: /reference/tools/ssgt/search/
+  - url: /reference/tools/ssgt/explore/
+  - url: /reference/tools/ssgt/subset/
+  - url: /reference/tools/ssgt/options/
   todo: Move subset example snippet to subset page in the future
 ---
 

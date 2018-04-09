@@ -1,9 +1,9 @@
 ---
 title: Code Lists
 links:
-  - url: /training/resources/specifications/code-lists/country-codes/
-  - url: /training/resources/specifications/code-lists/faq/
-  - url: /training/resources/specifications/code-lists/genericode/
+  - url: /reference/specifications/code-lists/country-codes/
+  - url: /reference/specifications/code-lists/faq/
+  - url: /reference/specifications/code-lists/genericode/
 ---
 
 - TOC

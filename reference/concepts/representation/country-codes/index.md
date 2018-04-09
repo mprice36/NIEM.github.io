@@ -1,7 +1,7 @@
 ---
 title: Country Codes and the Representation Pattern
 short: Country Codes
-code_lists: /training/resources/specifications/code-lists/country-codes/
+code_lists: /reference/specifications/code-lists/country-codes/
 ---
 
 - TOC
