@@ -1,4 +1,4 @@
----
+#---
   title: IEPD Developer
   icon: fa-envelope-o
   description: An IEPD developer designs and manages the specification of an information exchange.
@@ -24,14 +24,111 @@ An Information Exchange Package (IEP) contains Information Exchange Package Docu
 
 - XML schemas and other XML documents using NIEM tools
 
-## Mapping Document
+## Map and Model
 
-A document to identify how exchange data aligns to, or “maps,” and reuses NIEM data objects
-Referred to as a Component Mapping Template (CMT), Component Mapping Tool, Mapping spreadsheet, etc.
-Demonstrates how data objects within an exchange map to data objects in NIEM by recording the degree of similarity
-Aids the identification process of objects that are not currently within NIEM and are candidates for inclusion in an extension schema
-This document helps communicate the level of reuse in NIEM to business users/owners
-The mapping document is an effective tool for documenting how the NIEM data model was reused. A template is available for use on NIEM.gov. 
+### Mapping Document
+
+The Mapping Document identifies how exchange data aligns to, or "maps," and reuses NIEM data objects. It is also referred to as a Component Mapping Template (CMT), Component Mapping Tool, or Mapping Spreadsheet.
+
+- Demonstrates how data objects within an exchange map to data objects in NIEM by recording the degree of similarity
+
+- Aids the identification process of objects that are not currently within NIEM and are candidates for inclusion in an extension schema
+
+- Helps communicate the level of reuse in NIEM to business users/owners
+
+A template is available for use on NIEM.gov.
+
+![Mapping Document Example](mapping.png "Mapping Document Example")
+
+#### Source Data Colummns (A)
+
+| Source Container Type | Source Element | Source Data Type | Source Element Definition |
+| --- | --- | --- | --- |
+| The data source high-level object, class, or context of a set of data elements (e.g., person, vehicle, arrest) | The source element is a specific data element that is associated with the Source Container Type | Data type of the source element | The definition of the source element being mapped |
+| **Example** |
+| Person | DateofBirth | Date | Date of birth of a person |
+
+#### NIEM Data Columns (B)
+
+| NIEM Element | NIEM Element Path | NIEM Type | NIEM Element Definition |
+| --- | --- | --- | --- |
+| The name of the NIEM element the source element is mapped to | The path of the NIEM Element within the NIEM Model | The name of the type that is associated with the NIEM element | The standard definition for the NIEM element found in the element’s metadata |
+| **Example** |
+| nc:PersonBirthDate | nc:Person/nc:PersonBirthDate | nc:DateType | A date a person was born |
+
+#### Mapping Column (C)
+
+In a Mapping Document, you must search the NIEM model for appropriate data elements to map to local exchange data. If a NIEM element is found, the correlation of the source and NIEM elements is recorded here.
+
+| Mapping |
+| --- |
+| Identifies how the source object or element maps to the NIEM object or element. |
+| **Example** |
+| Equivalent |
+
+The Mapping "value" is the degree to which a source element maps to a NIEM element. Possible "values" include the following:
+
+- Equivalent
+
+- Partial
+
+- No Match
+
+You should include additional notes in the mapping document to provide reasoning and context.
+
+### Mapping Process
+
+The mapping process is composed of two steps:
+
+1. Set up a Mapping Document
+
+1. Search and Map NIEM Elements
+
+#### Set up a Mapping Document
+
+Do the following for the initial setup of the document:
+
+1. Identify an object within the exchange content model as your starting point for entry in the document. This is the **Source Container Type** (a Source Container Type is the containing object to which elements belong).
+1. Identify an element within that object. This is the **Source Element**.
+1. Identify the data type for the element. This is the **Source Data Type**.
+1. Provide a definition for the element. This is the **Source Element Definition**.
+1. Repeat the previous steps for each object in the **Exchange Content Model**.
+
+Example
+
+Four columns should be filled in for every element within the exchange content model
+
+![Mapping Setup Example](mappingsetup.png "Mapping Setup Example")
+
+#### Search and Map NIEM Elements
+
+Do the following to find NIEM elements that may have the same logical definition, semantics, and structure as source elements.
+
+1. Use a NIEM tool (e.g., Schema Subset Generation Tool (SSGT)), find an element from a NIEM reference schema that “maps” to the exchange data element.
+
+![Mapping Tool Example (SSGT)](mappingtool.png "Mapping Tool Example (SSGT)")
+
+1. Try searching by name, for synonyms, conceptual meaning, or by type.
+
+1. Map objects that are conceptually and semantically equivalent. If the alignment is not easily understood, it is better to extend.
+
+1. Document the information about the NIEM data object, including the type of mapping (equivalent, partial, no match), if one is found.
+
+#### Model Searching Tips
+
+| Search Method | Explanation | Example |
+| --- | --- | --- | --- |
+| Name Variations | Searching for variations of a name can often yield results | Search for **Officer** instead of **Official** to yield **j:EnforcementOfficial** |
+| Conceptual Meaning | Search for words that could be in the definition of the data object | Search for **Modified Charge** to yield **j:AmendedCharge** |
+| Synonyms | Synonyms of the data object to find exactly what you are looking for | Search for **Facility** instead of **Building** to get different results |
+| Containers | Use a more abstract term to find containers of the data objects | Search for **Person** instead of **Person Arrest** to get the maximum number of results |
+
+
+## Build and Validate
+
+### Create XML Schemas & Artifacts
+
+### Validate XML Schemas
 
 ## Define an Exchange Content Model
 
@@ -72,59 +169,11 @@ XML artifacts aid in the understanding and representation of an information exch
 
     Provide formatting or transformation for the data used within an exchange.
 
-## Lifecycle Phases
-
-### Scenario Planning
-
-During the Scenario Planning phase, you review background information related to your information exchange, assess resource impact, understand business context, and identify information exchange business scenarios.
-
-### Analyze Requirements
-
-During the Analyze Requirements phase, the selected information exchange scenario is further elaborated to understand and document the business context and data requirements.
-
-### Map and Model
-
-During the Map and Model phase, you create an exchange content model based on your information exchange requirements. The Exchange Content Model is then mapped to the NIEM data model.
-
-### Build and Validate
-
-During the Build and Validate phase, you create a set of exchange-specific, NIEM-conformant XML schemas that implement the exchange content model created for the exchange.
-
-### Assemble and Document
-
-During the Assemble and Document Phase, you prepare and package all related files for the IEPD into a single, self‐contained, self-documented, portable archive file.
-
-### Publish and Implement
-
-During the last phase, the Publish and Implement phase, you implement the IEPD into production and publish the IEPD for search, discovery, and reuse.
-
-## IEPD Artifacts
+### IEPD Artifacts
 
 Artifacts are the deliverables in the IEPD development process. Some artifacts are required while others are recommended.
 
 The required and recommended artifacts associated with each phase of the IEPD lifecycle are highlighted here.
-
-### Scenario Planning Artifacts
-
-The artifacts associated with the Scenario Planning phase include Business Processes Diagrams, Use Case Diagrams, and Sequence Diagrams.
-
-- Business processes diagrams provide a bridge between use cases and other business scenarios, such as Sequence Diagrams. Business processes provide background for how the exchange is currently being designed, so that other entities may leverage their exchanges through reuse.
-
-- Use case diagrams depict the business level perspectives of the information exchange.
-
-- Sequence diagrams represent the sequence of events that occur during an information exchange.
-
-None of the artifacts indicated in this phase are required, but are recommended to better understand and document the business need.
-
-### Analyze Requirements Artifacts
-
-The artifacts associated with the Analyze Requirements phase include business rules and business requirements.
-
-- Business rules define rules around how data is structured and represented as part of the exchange.
-
-- Business requirements express business drivers or business needs for the exchange.
-
-None of the artifacts indicated in this phase are required, but are recommended to better understand and document the business need.
 
 ### Map and Model Artifacts
 
