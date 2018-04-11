@@ -123,6 +123,17 @@ Do the following to find NIEM elements that may have the same logical definition
 | Synonyms | Synonyms of the data object to find exactly what you are looking for | Search for **Facility** instead of **Building** to get different results |
 | Containers | Use a more abstract term to find containers of the data objects | Search for **Person** instead of **Person Arrest** to get the maximum number of results |
 
+#### Notes on Reuse of the NIEM Data Model
+
+The hierarchical implications of the model must be considered when reusing NIEM elements. NIEM’s hierarchal approach to modeling allows for flexibility and reuse, while still maintaining context.
+
+- Elements and types are defined globally and referenced when used.
+
+- Type hierarchy provides a contextual representation of the element.
+
+- Attributes are assigned to some types to provide context on their use.
+
+![Mapping Tool Example (SSGT)](mappingreuse.png "Mapping Tool Example (SSGT)")
 
 ## Build and Validate
 
