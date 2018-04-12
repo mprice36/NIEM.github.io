@@ -74,13 +74,12 @@ The **Mapping** value is the degree to which a source element maps to a NIEM ele
 | Partial | Partial Match is where you can take some things from NIEM and have to extend the rest for a given Type. In other words, when the semantics or structure of an exchange and NIEM data objects do not exactly fit. |
 | No Match | No NIEM element or type maps to the source requirement.  The result is an extension to NIEM through an IEPD extension schema. |
 
-##### Notes on Equivalent Match
+{:.note}
+> Notes on Equivalent Match
+>   - If a NIEM object has similar semantics and structure to an exchange data object, it is probably an equivalent match.
+>   - Equivalent matches can be difficult to find due to complex containers and different names.
+>   - As a first check, verify that the NIEM data object’s definition and its containing objects logically align to the exchange object.
 
-- If a NIEM object has similar semantics and structure to an exchange data object, it is probably an equivalent match.
-
-- Equivalent matches can be difficult to find due to complex containers and different names.
-
-- As a first check, verify that the NIEM data object’s definition and its containing objects logically align to the exchange object.
 
 ##### Equivalent Match Examples
 
@@ -108,7 +107,7 @@ The **Mapping** value is the degree to which a source element maps to a NIEM ele
 | Conflict Description | Example(s) | Mitigation |
 | --- | --- | --- |
 | **Semantic:** Occurs when there is a small discrepancy in definition or name | **nc:Date** does not align exactly with **local-ns:EntryDate** | Reuse the NIEM data type and create a local element. |
-| **Structural:** Occurs when the NIEM data object has constraints that disallow a direct mapping of the exchange data object. | Data type mismatches; Code lists (enumeration facets) do not have all necessary entries. | Reuse the NIEM element and either create a new data type or extend a NIEM base type. |
+| **Structural:** Occurs when the NIEM data object has constraints that disallow a direct mapping of the exchange data object. | Data type mismatches<br>Code lists (enumeration facets) do not have all necessary entries. | Reuse the NIEM element and either create a new data type or extend a NIEM base type. |
 | **Container:** Occurs when an exchange data object hierarchy does not match the hierarchy of a desired NIEM data object. | Data object contains (or is contained within) elements or types that do not make logical sense or align well. | Reuse the NIEM element or type but create local elements or types to contain them. |
 
 ##### Notes on No Match
