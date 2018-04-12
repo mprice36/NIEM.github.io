@@ -28,7 +28,7 @@
 -------------------
 This introduction to *ConTesA* will show you how to use *ConTesA* to
 validate a test document for NIEM conformance and how to trace down
-common mistakes in developing a NIEM conformant document.
+common mistakes in developing a NIEM conformance document.
 
 ### Prerequisites
 
@@ -42,8 +42,8 @@ familiar with at least one of the supported NIEM data formats (i.e.
 > We use XML as the data format for in this tutorial.
 
 
-## Step 1: Create a Document
-----------------------------
+## Step 1: Create a Data Model
+------------------------------
 *ConTesA* currently uses XML or XML Schema (XSD) as input for validation
 against the NIEM NDR. XSD is used to prescribe a set of formatting rules
 for an XML document (call an XML instance document) and is, itself,
@@ -52,13 +52,39 @@ specified in XML format; thus, subject to XSD formatting rules.
 In this step, we're going to create a few XML and XSD documents to input
 into *ConTesA*.
 
-### A Naive XML Document
+### Define Data Requirements
 
-Let's create a simple XML document with no prior knowledge of the NIEM
-NDR. Our XML document will implement a simple root element *PersonName*
-which contains two more elements (*PersonGivenName* and *PersonSurName*)
-to identify an indiviual by their full name. In your favorite text editor,
-create the following document and name it "naive_person_name.xml":
+Scenario: One organization would like to represent the relevant data of
+traffic accidents, namely crashes, using the NIEM standard. Let's 
+establish a simple set of data requirements necessary to represent the
+relevant information in these "crash" reports:
+
+* Crash Driver Information
+  * Person
+    * Date of Birth
+    * Name
+  * Crash
+    * Incident Location
+    * Vehicle
+      * Driver
+        * Role
+        * License
+      * Vehicle Identification Number
+
+### Extract NIEM Components
+
+Once we've defined our data requirements we can use the NIEM
+Subset Generation Tool (SSGT) to extract the necessary components
+to build a NIEM IEPD.
+
+{:.tip}
+> SSGT is a great tool for searching the list of prefabricated
+NIEM components to prevent extraneous work. Check out the [SSGT
+tools page](../ssgt) if you are not yet familiar with it.
+
+Knowing our requirments and the components of NIEM, our model might take a form like:
+
+![A simplified graphical model of the Crash data by NIEM components](assets/model.png "Crash Data Model by NIEM Components")
 
 <figure>
 <figcaption><b>File: <i>naive_person_name.xml</i></b></figcaption>
@@ -141,3 +167,8 @@ how NIEM implements *PersonName* in NIEM 4.0:
 {% include_relative assets/niem_person_name_instance.xml %}
 {% endhighlight %}
 </figure>
+
+
+## Step 2: Uploading to ConTesA
+-------------------------------
+Login to your *ConTesA* account
