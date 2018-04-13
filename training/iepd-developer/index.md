@@ -26,6 +26,6 @@ An Information Exchange Package (IEP) contains Information Exchange Package Docu
 
 ## Map and Model
 
-[Mapping Document](mapping/ "Mapping Document")
+[Mapping Process and Document](mapping/ "Process and Document")
 
-Mapping Process
+[XML Schemas and Other XML Documents](schemas/ "XML Schemas and Other XML Documents")

@@ -16,7 +16,63 @@ links:
 
 {% include icon-list.html links=page.links %}
 
-# Map and Model
+# Mapping Process
+
+The mapping process is composed of two steps:
+
+1. Set up a Mapping Document.
+
+1. Search and Map NIEM Elements.
+
+## Set Up a Mapping Document
+
+Do the following for the initial setup of the document:
+
+1. Identify an object within the exchange content model as your starting point for entry in the document. This is the **Source Container Type** (the containing object to which elements belong).
+1. Identify an element within that object. This is the **Source Element**.
+1. Identify the data type for the element. This is the **Source Data Type**.
+1. Provide a definition for the element. This is the **Source Element Definition**.
+1. Repeat the previous steps for each object in the **Exchange Content Model**.
+
+{:.example}
+>Four columns should be filled in for every element within the >exchange content model
+>
+>![Mapping Setup Example](mappingsetup.png "Mapping Setup Example")
+
+## Search and Map NIEM Elements
+
+Do the following to find NIEM elements that may have the same logical definition, semantics, and structure as source elements.
+
+1. Use a NIEM tool (e.g., Schema Subset Generation Tool (SSGT)), find an element from a NIEM reference schema that “maps” to the exchange data element.
+
+![Mapping Tool Example (SSGT)](mappingtool.png "Mapping Tool Example (SSGT)")
+
+1. Try searching by name, for synonyms, conceptual meaning, or by type.
+
+1. Map objects that are conceptually and semantically equivalent. If the alignment is not easily understood, it is better to extend.
+
+1. Document the information about the NIEM data object, including the type of mapping (equivalent, partial, no match), if one is found.
+
+### Model Searching Tips
+
+| Search Method | Explanation | Example |
+| --- | --- | --- | --- |
+| Name Variations | Searching for variations of a name can often yield results | Search for **Officer** instead of **Official** to yield **j:EnforcementOfficial** |
+| Conceptual Meaning | Search for words that could be in the definition of the data object | Search for **Modified Charge** to yield **j:AmendedCharge** |
+| Synonyms | Synonyms of the data object to find exactly what you are looking for | Search for **Facility** instead of **Building** to get different results |
+| Containers | Use a more abstract term to find containers of the data objects | Search for **Person** instead of **Person Arrest** to get the maximum number of results |
+
+### Notes on Reuse of the NIEM Data Model
+
+The hierarchical implications of the model must be considered when reusing NIEM elements. NIEM’s hierarchal approach to modeling allows for flexibility and reuse, while still maintaining context.
+
+- Elements and types are defined globally and referenced when used.
+
+- Type hierarchy provides a contextual representation of the element.
+
+- Attributes are assigned to some types to provide context on their use.
+
+![Mapping Tool Example (SSGT)](mappingreuse.png "Mapping Tool Example (SSGT)")
 
 ## Mapping Document
 
@@ -32,7 +88,7 @@ A template is available for use on NIEM.gov.
 
 ![Mapping Document Example](mapping.png "Mapping Document Example")
 
-### Source Data Colummns (A)
+### Source Data Columns (A)
 
 | Source Container Type | Source Element | Source Data Type | Source Element Definition |
 | --- | --- | --- | --- |
@@ -125,102 +181,3 @@ The **Mapping** value is the degree to which a source element maps to a NIEM ele
 ### Final Considerations
 
 You should include additional notes in the mapping document to provide reasoning and context. When mapping, be conservative in extending NIEM data objects to maintain the integrity of the NIEM data model.
-
-## Mapping Process
-
-The mapping process is composed of two steps:
-
-1. Set up a Mapping Document
-
-1. Search and Map NIEM Elements
-
-### Set up a Mapping Document
-
-Do the following for the initial setup of the document:
-
-1. Identify an object within the exchange content model as your starting point for entry in the document. This is the **Source Container Type** (the containing object to which elements belong).
-1. Identify an element within that object. This is the **Source Element**.
-1. Identify the data type for the element. This is the **Source Data Type**.
-1. Provide a definition for the element. This is the **Source Element Definition**.
-1. Repeat the previous steps for each object in the **Exchange Content Model**.
-
-{:.example}
->Four columns should be filled in for every element within the >exchange content model
->
->![Mapping Setup Example](mappingsetup.png "Mapping Setup Example")
-
-### Search and Map NIEM Elements
-
-Do the following to find NIEM elements that may have the same logical definition, semantics, and structure as source elements.
-
-1. Use a NIEM tool (e.g., Schema Subset Generation Tool (SSGT)), find an element from a NIEM reference schema that “maps” to the exchange data element.
-
-![Mapping Tool Example (SSGT)](mappingtool.png "Mapping Tool Example (SSGT)")
-
-1. Try searching by name, for synonyms, conceptual meaning, or by type.
-
-1. Map objects that are conceptually and semantically equivalent. If the alignment is not easily understood, it is better to extend.
-
-1. Document the information about the NIEM data object, including the type of mapping (equivalent, partial, no match), if one is found.
-
-### Model Searching Tips
-
-| Search Method | Explanation | Example |
-| --- | --- | --- | --- |
-| Name Variations | Searching for variations of a name can often yield results | Search for **Officer** instead of **Official** to yield **j:EnforcementOfficial** |
-| Conceptual Meaning | Search for words that could be in the definition of the data object | Search for **Modified Charge** to yield **j:AmendedCharge** |
-| Synonyms | Synonyms of the data object to find exactly what you are looking for | Search for **Facility** instead of **Building** to get different results |
-| Containers | Use a more abstract term to find containers of the data objects | Search for **Person** instead of **Person Arrest** to get the maximum number of results |
-
-### Notes on Reuse of the NIEM Data Model
-
-The hierarchical implications of the model must be considered when reusing NIEM elements. NIEM’s hierarchal approach to modeling allows for flexibility and reuse, while still maintaining context.
-
-- Elements and types are defined globally and referenced when used.
-
-- Type hierarchy provides a contextual representation of the element.
-
-- Attributes are assigned to some types to provide context on their use.
-
-![Mapping Tool Example (SSGT)](mappingreuse.png "Mapping Tool Example (SSGT)")
-
-## Build and Validate
-
-### Create XML Schemas & Artifacts
-
-Data objects identified in the mapping document will appear in either the exchange, extension, or subset schemas. Associations and cardinality from the exchange content model will be reflected in XML schemas.
-
-#### NIEM-Conformant XML Schema Generation
-
-XML schemas that are typically created for an IEPD include subset, exchange, extension, constraint, and reference. A NIEM-conformant IEPD is required to constrain at least one schema that is either a NIEM reference schema or subset schema. XML schemas for NIEM-conformant exchanges can be created in two ways:
-
-| Method | Process |
-| --- | ---|
-| Generation Through Tools | Automatically generate schemas based on an exchange content model, mapping document, or other inputs. |
-| Coded by Hand | Start with existing schemas or NIEM schema templates, which can be derived from NIEM reference schemas. |
-
-It is recommended that you start with tools and modify as needed.
-
-##### The NIEM Tools Catalog
-
-The NIEM Tools catalog provides a marketplace for a number of different tools that aid in schema generation. The **Code List Generator**, for example, provides you with the ability to build an XML schema file for code sets from an Excel spreadsheet.
-
-The NIEM Tools Catalog resides at [NIEM Tools Catalog](https://www.niem.gov/tools-catalog "NIEM Tools Catalog").
-
-The Code List Generator resides at [Code List Generator Tool](https://www.niem.gov/CLG "Code List Generator Tool")
-
-![Code List Generator](buildtools.png "Code List Generator")
-
-#### Create a Subset Schema
-
-Subset schemas are constructed by reusing the elements and types needed for the exchange from NIEM reference schemas.
-
-#### Subset Schema Considerations
-
-- A subset schema is a required artifact of an IEPD and should be NIEM-conformant.
-
-- A subset schema should always validate against the entire reference schema.
-
-- A subset schema can be generated using a number of tools from a variety of inputs (e.g., Wantlists, XMI files).
-
-### Validate XML Schemas
