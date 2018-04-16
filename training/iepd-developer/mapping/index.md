@@ -1,15 +1,7 @@
 ---
-title: IEPD Developer
+title: Mapping Process & Document
 icon: fa-envelope-o
-description: An IEPD developer designs and manages the specification of an information exchange.
-links:
-- url: /model/
-  newtab: true
-- url: /iepd-starter-kit/
-  newtab: true
-- url: https://www.niem.gov/techhub/iepd-resources
-  title: TechHub IEPD Resources
-  description: Resources for IEPD developers on our TechHub site.
+description: The mapping process involves setting up a mapping document, and searching and mapping NIEM elements.
 ---
 
 {{ page.description}}
@@ -18,75 +10,34 @@ links:
 
 # Mapping Process
 
-The mapping process is composed of two steps:
+## What is a Mapping Document?
 
-1. Set up a Mapping Document.
+The Mapping Document is a table or spreadsheet that identifies how existing exchange data aligns to (or maps) and reuses NIEM data objects. It is also referred to as a Component Mapping Template (CMT), Component Mapping Tool, or Mapping Spreadsheet. The document has the following characteristics:
 
-1. Search and Map NIEM Elements.
+- Demonstrates how the existing exchange data (or the **Exchange Content Model**) objects map to NIEM data objects by recording the degree of similarity.
 
-## Set Up a Mapping Document
+- Helps to identify data objects that are not currently within NIEM as candidates for an **Extension Schema Document**.
 
-Do the following for the initial setup of the document:
+- Helps to communicate the level of reuse of NIEM to business users and owners.
 
-1. Identify an object within the exchange content model as your starting point for entry in the document. This is the **Source Container Type** (the containing object to which elements belong).
+The following illustration shows the general structure of a mapping document.
+
+![Mapping Document Outline](mapping.png "Mapping Document Outline")
+
+## Setting Up a Mapping Document
+
+The first steps in setting up a mapping are the following:
+
+1. Identify the entry point data object within the exisiting exchange content model. This is the **Source Container Type** (the containing object to which elements belong).
 1. Identify an element within that object. This is the **Source Element**.
 1. Identify the data type for the element. This is the **Source Data Type**.
 1. Provide a definition for the element. This is the **Source Element Definition**.
 1. Repeat the previous steps for each object in the **Exchange Content Model**.
 
 {:.example}
->Four columns should be filled in for every element within the >exchange content model
+>Four columns should be filled in for every element within the exchange content model
 >
 >![Mapping Setup Example](mappingsetup.png "Mapping Setup Example")
-
-## Search and Map NIEM Elements
-
-Do the following to find NIEM elements that may have the same logical definition, semantics, and structure as source elements.
-
-1. Use a NIEM tool (e.g., Schema Subset Generation Tool (SSGT)), find an element from a NIEM reference schema that “maps” to the exchange data element.
-
-![Mapping Tool Example (SSGT)](mappingtool.png "Mapping Tool Example (SSGT)")
-
-1. Try searching by name, for synonyms, conceptual meaning, or by type.
-
-1. Map objects that are conceptually and semantically equivalent. If the alignment is not easily understood, it is better to extend.
-
-1. Document the information about the NIEM data object, including the type of mapping (equivalent, partial, no match), if one is found.
-
-### Model Searching Tips
-
-| Search Method | Explanation | Example |
-| --- | --- | --- | --- |
-| Name Variations | Searching for variations of a name can often yield results | Search for **Officer** instead of **Official** to yield **j:EnforcementOfficial** |
-| Conceptual Meaning | Search for words that could be in the definition of the data object | Search for **Modified Charge** to yield **j:AmendedCharge** |
-| Synonyms | Synonyms of the data object to find exactly what you are looking for | Search for **Facility** instead of **Building** to get different results |
-| Containers | Use a more abstract term to find containers of the data objects | Search for **Person** instead of **Person Arrest** to get the maximum number of results |
-
-### Notes on Reuse of the NIEM Data Model
-
-The hierarchical implications of the model must be considered when reusing NIEM elements. NIEM’s hierarchal approach to modeling allows for flexibility and reuse, while still maintaining context.
-
-- Elements and types are defined globally and referenced when used.
-
-- Type hierarchy provides a contextual representation of the element.
-
-- Attributes are assigned to some types to provide context on their use.
-
-![Mapping Tool Example (SSGT)](mappingreuse.png "Mapping Tool Example (SSGT)")
-
-## Mapping Document
-
-The Mapping Document identifies how exchange data aligns to, or "maps," and reuses NIEM data objects. It is also referred to as a Component Mapping Template (CMT), Component Mapping Tool, or Mapping Spreadsheet.
-
-- Demonstrates how data objects within an exchange map to data objects in NIEM by recording the degree of similarity
-
-- Aids the identification process of objects that are not currently within NIEM and are candidates for inclusion in an extension schema
-
-- Helps communicate the level of reuse in NIEM to business users/owners
-
-A template is available for use on NIEM.gov.
-
-![Mapping Document Example](mapping.png "Mapping Document Example")
 
 ### Source Data Columns (A)
 
@@ -177,6 +128,42 @@ The **Mapping** value is the degree to which a source element maps to a NIEM ele
 >| Hazmat Indicator | No Match | nc:Vessel/local<br>ns:HazmatIndicator |
 
 \* **Mapping Value** is intended to show the difference between a Partial Match and No Match.
+
+## Search and Map NIEM Elements
+
+Do the following to find NIEM elements that may have the same logical definition, semantics, and structure as source elements.
+
+1. Use a NIEM tool (e.g., Schema Subset Generation Tool (SSGT)), find an element from a NIEM reference schema that “maps” to the exchange data element.
+
+![Mapping Tool Example (SSGT)](mappingtool.png "Mapping Tool Example (SSGT)")
+
+1. Try searching by name, for synonyms, conceptual meaning, or by type.
+
+1. Map objects that are conceptually and semantically equivalent. If the alignment is not easily understood, it is better to extend.
+
+1. Document the information about the NIEM data object, including the type of mapping (equivalent, partial, no match), if one is found.
+
+### Model Searching Tips
+
+| Search Method | Explanation | Example |
+| --- | --- | --- | --- |
+| Name Variations | Searching for variations of a name can often yield results | Search for **Officer** instead of **Official** to yield **j:EnforcementOfficial** |
+| Conceptual Meaning | Search for words that could be in the definition of the data object | Search for **Modified Charge** to yield **j:AmendedCharge** |
+| Synonyms | Synonyms of the data object to find exactly what you are looking for | Search for **Facility** instead of **Building** to get different results |
+| Containers | Use a more abstract term to find containers of the data objects | Search for **Person** instead of **Person Arrest** to get the maximum number of results |
+
+### Notes on Reuse of the NIEM Data Model
+
+The hierarchical implications of the model must be considered when reusing NIEM elements. NIEM’s hierarchal approach to modeling allows for flexibility and reuse, while still maintaining context.
+
+- Elements and types are defined globally and referenced when used.
+
+- Type hierarchy provides a contextual representation of the element.
+
+- Attributes are assigned to some types to provide context on their use.
+
+![Mapping Tool Example (SSGT)](mappingreuse.png "Mapping Tool Example (SSGT)")
+
 
 ### Final Considerations
 
