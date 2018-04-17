@@ -32,6 +32,8 @@
 
 {% include_relative intro/intro_doc.md %}
 
+<br/>
+
 # The ConTesA Tool
 
 This introduction to *ConTesA* will show you how to use *ConTesA* to
@@ -53,6 +55,8 @@ or [RDF]({{page.rdf_source_url}})) and your favorite text editor.
 
 {:.note}
 > We use XML as the data format for in this tutorial.
+
+<br/>
 
 ## Step 1: Create a Data Model
 
@@ -131,6 +135,8 @@ from this schema might take the form:
 {% endhighlight %}
 </figure>
 
+<br/>
+
 ## Step 2: Validating with ConTesA
 
 ----------------
@@ -149,11 +155,60 @@ a button to upload a document for validation.
   "ConTesA User Home Page")
 
 *ConTesA* takes two kinds of input documents: an XSD (.xsd) file or a
-Zip Archive (.zip) file.
+Zip Archive (.zip) file. Let's upload a Zip Archive of our Crash example
+to *ConTesA* under the file name "crash_model_niem_extension.zip".
 
-![Image of ConTesA Crash Model's schema validation
-  page](assets/contesa_crash_model_schema.png "ConTesA Crash Model Schema
+Immediately after you upload the file to *ConTesA*, it will
+automatically run the NIEM NDR set against your documents and
+generate a conformance report.
+
+![Image of ConTesA Crash Model validation
+  page](assets/contesa_crash_model_extension.png "ConTesA Crash Model Schema
   Validation Page")
+
+Let's assume we failed rules in developing our schema document where we
+did not use the "complexContent" element to specify our "complexTypes".
+The bar under the validation for the schema reflects the level of
+validation:
+
+{:.tip}
+> You can download that misformed schema
+> [here](assets/crash_model_niem_extension_bad.xsd).
 
 ![Image of ConTesA Validation Summary
   Bar](assets/contesa_validation_summary.png "ConTesA Validation Summary Bar")
+
+<br/>
+
+## Step 3: Understanding the ConTesA Conformance Report
+
+----------------
+
+Let's open the *ConTesA* conformance report for our
+"crash_model_niem_extension.zip":
+
+![Image of ConTesA Crash Model Validation Rules Summary
+](assets/contesa_crash_model_summary.png "ConTesA Crash Model Validation Rules Summary")
+
+In the case where we violated the rules for specifying complex types,
+we see a set of rules failed:
+
+![Image of ConTesA Crash Model Validation Rules Bad Summary
+](assets/contesa_crash_model_bad_summary.png "ConTesA Crash Model Validation Rules Bad Summary")
+
+The details of the failed rules follow just below the summary of the
+conformance results. This detailed summary gives the status, line number,
+rule, and rule text from the NIEM NDR explaining the validation of the
+provided document.
+
+![Image of ConTesA Crash Model Rules Bad
+](assets/contesa_crash_model_bad_rules.png "ConTesA Crash Model Rules Bad")
+
+Consider rules 9-29 and 9-63 from the NIEM NDR:
+
+{% include ndr-rule.html number="9-29" %}
+
+{% include ndr-rule.html number="9-63" %}
+
+They tell us exactly that lines 42, 48, 78, and 84 in our misformed
+XSD are required to be complex content under an extended type.
