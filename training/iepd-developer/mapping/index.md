@@ -56,16 +56,14 @@ The **Mapping** value is the degree to which a source element maps to a NIEM ele
 | No Match | No exchange element or type maps to NIEM.  The result is an extension to NIEM through an IEPD extension schema. |
 
 1. Use a NIEM tool (e.g., Schema Subset Generation Tool (SSGT)) to find an element from a NIEM reference schema that “maps” to the exchange data element. In this example, look for a "Property" with "personSSN" as the search string.
-
 1. If nothing is found that looks like a match, try searching by name, for synonyms, conceptual meaning, or by type. In this example, a possible match is found.<br>![Mapping Tool Example (SSGT)](ssgtexample.png "Mapping Tool Example (SSGT)")
-
 1. Enter the match in the mapping document under "NIEM Element."<br>![Mapping Result Example (SSGT)](mappingelement.png "Mapping Result Example (SSGT)")
-
 1. Map objects that are conceptually and semantically equivalent. If the alignment is not easily understood, it is better to extend.
-
 1. Document the information about the NIEM data object, including the type of mapping (equivalent, partial, no match) if one is found. In this example, enter the type under "NIEM Type."<br>![Mapping Result Example (SSGT)](mappingtype.png "Mapping Result Example (SSGT)")
-
-1. In this example, click the **Add** button to begin the schema creation process and to identify an element path.<br>![Mapping Result Example (SSGT)](mappingpath.png "Mapping Result Example (SSGT)")
+1. Click the **Add** button to begin the schema-creation process and to identify an element path.<br>![Mapping Result Example (SSGT)](mappingpath.png "Mapping Result Example (SSGT)")
+1. Note the **Types** and **Elements** areas are populated when the **Add** button is clicked.<br>![Mapping Result Example (SSGT)](mappingadditions.png "Mapping Result Example (SSGT)")
+1. The "NIEM Element Path" becomes the following:<br>![Mapping Result Example (SSGT)](mappingfinal.png "Mapping Result Example (SSGT)")
+1. With the information you have now, you can begin the schema-generation and validation process.
 
 ### Model Searching Tips
 
