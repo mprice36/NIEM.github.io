@@ -1,0 +1,18 @@
+
+The [Migration Tool]({{ site.data.links.migration }}) enables users to upgrade an XML Schema release subset to a newer version.  This supports the process to updating an existing exchange to use a more recent NIEM release.
+
+Migrations may only be made over consecutive releases.  It will be necessary to run multiple migrations to convert to a non-consecutive release.  For example, to migrate a 3.1 release subset to 4.0, two migrations must be made: 3.1 to 3.2, and then 3.2 to 4.0.
+
+{:.features}
+- Migrate a release subset to a newer version
+- Updated wantlist
+- Migration report containing status information and any issues encountered
+
+{:.note}
+> The migration tool only migrates release subsets.  Local NIEM schemas must be updated manually.
+
+| User | Use Cases |
+| ---- | --------- |
+| Domain modeler | n/a |
+| IEPD developer | Convert the subset of an exchange to a newer release.  |
+| IEPD implementer | n/a |

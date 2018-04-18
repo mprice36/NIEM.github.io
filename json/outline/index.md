@@ -24,8 +24,8 @@ and do and why they are useful together.
     - [plain JSON](../data/simple): Overview of JSON Data
 
 ^
-- [How to use NIEM and JSON](../howto): Provides normative and non-normative guidance on
- how NIEM and JSON are used, including examples.
+- [A reference on NIEM and JSON](../reference): Provides normative and
+ non-normative guidance on how NIEM and JSON are used, including examples.
   - [names](../names): Names for data
     - [names/reuse](../names/reuse): Reuse of names and definitions
     - [names/syntax](../names/syntax): Descriptive naming
@@ -54,14 +54,14 @@ INSTANCES ONLY ABOVE HERE. NO CLASSES ABOVE HERE
         - IEPD vs IEP
         - categories vs. individuals
         - templates vs. instances
-    - [models/reuse](/model/concepts/property): Reusable data definitions
+    - [models/reuse](/reference/concepts/property): Reusable data definitions
         - classes & properties
         - global data definitions
-    - [models/has-a](/model/concepts/type): Hierarchical models
+    - [models/has-a](/reference/concepts/type): Hierarchical models
         - Hierarchical models 
         - JSON properties
         - Cardinality (minItems, maxItems)
-    - [models/releases](/model/releases): The NIEM model
+    - [models/releases](/reference/releases): The NIEM model
         - Spreadsheets
         - Movement
         - XML Schemas
@@ -88,7 +88,7 @@ NO JSON SCHEMA ABOVE HERE
 
 <hr/>
 
-- [json-schema](../schema)
+- [json-schema](../json-schema)
     - [In-schema references](../json-schema/references) (JSON identifiers)
         - not really references
         - URIs

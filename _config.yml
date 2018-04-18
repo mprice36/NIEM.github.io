@@ -21,6 +21,7 @@ exclude:
   - normative-rules-guidance/country-codes/schema.png
   - json/guidance/aux
   - json/guidance/tmp
+  - json/outline
   - site-tools
   - "*/tmp.*"
 
@@ -31,7 +32,7 @@ plugins:
 repository: NIEM/niem.github.io
 
 # Uncomment this to view as a forked repo (e.g., http://$user.github.io/NIEM.github.io/).
-# baseurl: "NIEM.github.io"
+baseurl: "NIEM.github.io"
 
 # Site data
 superhero_iepd_path: https://github.com/NIEM/Developer-Network-IEPD-Series--SuperHero
