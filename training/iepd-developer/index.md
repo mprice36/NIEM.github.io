@@ -1,7 +1,7 @@
 ---
   title: IEPD Developer
   icon: fa-envelope-o
-  description: An IEPD developer designs and manages the specification of an information exchange.
+description: An Information Exchange Package Documentation (IEPD) Developer designs, builds, and validates the components (artifacts) of an Information Exchange Package (IEP). This includes a Mapping Document that matches your exchange data elements to the NIEM data model, and XML schemas and other XML documents generated from NIEM tools.
   links:
   - url: /reference/concepts/
     newtab: true
@@ -30,16 +30,20 @@
 
 {% include icon-list.html links=page.links %}
 
-# Build and Validate an IEPD
+# IEPD Lifecycle
 
-An Information Exchange Package (IEP) contains Information Exchange Package Documentation (IEPD) that you need to generate and validate to ensure NIEM conformance:
+This training section covers the six phases of the IEPD Lifecycle:
 
-- Mapping Document that matches your exchange data elements to the NIEM data model
-
-- XML schemas and other XML documents generated from NIEM tools
+1. **Scenario Planning**: During the Scenario Planning phase, you review background information related to your information exchange, assess resource impact, understand business context, and identify information exchange business scenarios.
+1. **Analyze Requirements**: During the Analyze Requirements phase, the selected information exchange scenario is further elaborated to understand and document the business context and data requirements.
+1. **Map and Model**: During the Map and Model phase, you create an exchange content model based on your information exchange requirements. The Exchange Content Model is then mapped to the NIEM data model.
+1. **Build and Validate**: During the Build and Validate phase, you create a set of exchange-specific, NIEM-conformant XML schemas that implement the exchange content model created for the exchange.
+1. **Assemble and Document**: During the Assemble and Document Phase, you prepare and package all related files for the IEPD into a single, self‐contained, self-documented, portable archive file.
+1. **Publish and Implement**: During the last phase, the Publish and Implement phase, you implement the IEPD into production and publish the IEPD for search, discovery, and reuse.
 
 ## Map and Model
 
-[Mapping Process and Document](mapping/ "Mapping Process and Document")
+The IEPD consists of the following:
 
-[Generate XML Schemas and Other XML Documents and Validate Them](schemas/ "Generate XML Schemas and Other XML Documents and Validate Them")
+- Mapping Document that matches your exchange data elements to the NIEM data model:<br>[Mapping Process and Document](mapping/ "Mapping Process and Document")
+- XML schemas and other XML documents generated from NIEM tools:<br>[Generate XML Schemas and Other XML Documents and Validate Them](schemas/ "Generate XML Schemas and Other XML Documents and Validate Them")
