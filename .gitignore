@@ -3,3 +3,8 @@
 .jekyll-metadata
 .sass-cache
 _site
+\#*#
+.#*
+~$*.docx
+~$*.pptx
+~$*.xlsx
