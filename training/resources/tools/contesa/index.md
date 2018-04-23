@@ -4,10 +4,6 @@
 
   contesa_url: "https://tools.niem.gov/contesa"
   tools_catalog_url: "https://www.niem.gov/tools-catalog"
-  ndr_url: "https://reference.niem.gov/niem/specification/naming-and-design-rules/4.0/niem-ndr-4.0.html"
-  xml_source_url: "https://www.w3.org/XML/"
-  json_source_url: "https://www.json.org/"
-  rdf_source_url: "https://www.w3.org/RDF/"
 ---
 
 *[NIEM]: National Information Exchange Model
@@ -27,10 +23,10 @@
     <b><i>ConTesA</i> – a web-based NIEM conformance testing tool.</b>
 </div>
 
+{% include_relative intro/intro_doc.md %}
+
 [![Image of ConTesA Main Page](assets/contesa_main.png
    "ConTesA Main Page")]({{page.contesa_url}})
-
-{% include_relative intro/intro_doc.md %}
 
 <br/>
 
@@ -45,13 +41,12 @@ common mistakes in developing a NIEM conformance document.
 To complete this tutorial, you'll need internet access and a
 [ConTesA account]({{page.contesa_url}}/registration). You'll also need
 to be familiar with at least one of the supported NIEM data formats
-(i.e. [XML]({{page.xml_source_url}}), [JSON]({{page.json_source_url}}),
-or [RDF]({{page.rdf_source_url}})) and your favorite text editor.
+(i.e. XML, JSON, or RDF and your favorite text editor.
 
 {:.tip}
 > Several parts of this tutorial refer to tools or techniques explained
-> in detail under the [NIEM IEPD Developer](../../../iepd-developer)
-> training page. We recommend you take a look.
+> in detail under the NIEM IEPD Developer page. We recommend you take a
+> look.
 
 {:.note}
 > We use XML as the data format for in this tutorial.
@@ -63,10 +58,10 @@ or [RDF]({{page.rdf_source_url}})) and your favorite text editor.
 ----------------
 
 *ConTesA* currently uses XML or XML Schema (XSD) as input for validation
-against the [NIEM Naming and Design Rules (NDR)]({{page.ndr_url}}). XSD
-is used to prescribe a set of formatting rules for an XML document (call
-an XML instance document) and is, itself, specified in XML format; thus,
-subject to XSD formatting rules.
+against the NIEM Naming and Design Rules (NDR). XSD is used to prescribe
+a set of formatting rules for an XML document (call an XML instance
+document) and is, itself, specified in XML format; thus, subject to XSD
+formatting rules.
 
 In this step, we're going to create a few XML and XSD documents to input
 into *ConTesA*.
@@ -98,8 +93,8 @@ to build a NIEM IEPD.
 
 {:.tip}
 > SSGT is a great tool for searching the list of prefabricated
-NIEM components to prevent extraneous work. Check out the [SSGT
-tools page](../ssgt) if you are not yet familiar with it.
+NIEM components to prevent extraneous work. Check out the SSGT
+tools page if you are not yet familiar with it.
 
 Knowing our requirements and the components of NIEM, our model
 might take a form like:
