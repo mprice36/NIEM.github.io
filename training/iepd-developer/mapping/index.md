@@ -1,34 +1,40 @@
 ---
-title: Mapping Process & Document
+title: Map and Model
 icon: fa-envelope-o
-description: The mapping process consists of the creation of a mapping document and then searching for NIEM elements and mapping them in the document.
+description: During the map and model phase, you compare your information exchange requirements to what's in NIEM, and then define a mapping between your requirements and NIEM content. You use a mapping document, which may be a spreadsheet or similar tabular form. 
 ---
 
 {{ page.description}}
 
 {% include icon-list.html links=page.links %}
 
-# What is a Mapping Document
+The mapping process consists of the creation of a mapping document and then searching for NIEM elements and mapping them in the document.
 
-The Mapping Document is a spreadsheet that identifies how existing exchange data aligns to (or maps) and reuses NIEM data objects. It is also referred to as a Component Mapping Template (CMT), Component Mapping Tool, or Mapping Spreadsheet. The document has the following characteristics:
+Your entries in the document identify the exchange requirements that are well-represented by NIEM, and what needs to be defined as an extension to NIEM.
 
-- Demonstrates how the existing exchange data (or the **Exchange Content Model**) objects map to NIEM data objects by recording the degree of similarity.
+In the following sections, we provide more detailed information on how you determine what you need to enter.
 
-- Helps to identify data objects that are not currently within NIEM as candidates for an **Extension Schema Document**.
+## What is a Mapping Document
+
+The Mapping Document has the following characteristics:
+
+- Demonstrates where the existing exchange data (or the Exchange Content Model) objects map to NIEM data objects by recording the degree of similarity.
+
+- Helps to identify data objects that are not currently within NIEM as candidates for an Extension Schema Document.
 
 - Helps to communicate the level of reuse of NIEM to business users and owners.
 
-The following illustration shows the general structure of a mapping document.
+The following illustration shows the recommended structure of a mapping document.
 
 ![Mapping Document Outline](mapping.png "Mapping Document Outline")
 
 ## Setting Up a Mapping Document
 
-Create a blank, nine-column table or spreadsheet with the headings shown in the previous illustration (Source Container Type, Source Element, etc.). You can use a sample mapping document provided at Sample Mapping Document.
+Create a blank, nine-column spreadsheet with the headings shown in the previous illustration (Source Container Type, Source Element, etc.). Alternatively you can start with the [sample mapping document we provide](../assets/SampleEmptyMappingDocument.xlsx).
 
-In the next steps, identify (fill in) the **Source Data Columns**:
+In the following steps, identify (fill in) the **Source Data Columns**:
 
-### Source Data Columns
+## Source Data Columns
 
 1. Identify a data object within the exisiting exchange content model. This is the **Source Container Type** (the containing object to which elements belong).
 1. Identify an element within that object. This is the **Source Element**.
@@ -37,7 +43,7 @@ In the next steps, identify (fill in) the **Source Data Columns**:
 1. Repeat the previous steps for each object in the Exchange Content Model.
 
 {:.example}
->Four columns should be filled in for every element within the exchange content model
+>Four columns should be filled in for every element within the exchange content model.
 >
 >![Mapping Setup Example](mappingsetup.png "Mapping Setup Example")
 
