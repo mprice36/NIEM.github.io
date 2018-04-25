@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1"
-  targetNamespace="http://release.niem.gov/niem/tutorial/contesa/"
-  xmlns:exch="http://release.niem.gov/niem/tutorial/contesa/"
+  targetNamespace="http://release.niem.gov/niem/training/contesa/"
+  xmlns:exch="http://release.niem.gov/niem/training/contesa/"
   xmlns:nc="http://release.niem.gov/niem/niem-core/4.0/"
   xmlns:appinfo="http://release.niem.gov/niem/appinfo/4.0/"
   xmlns:niem-xs="http://release.niem.gov/niem/proxy/xsd/4.0/"

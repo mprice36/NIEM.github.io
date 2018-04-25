@@ -73,17 +73,10 @@ traffic accidents, namely crashes, using the NIEM standard. Let's
 establish a simple set of data requirements necessary to represent the
 relevant information in these "crash" reports:
 
-* Crash Driver Information
-  * Person
-    * Date of Birth
-    * Name
-  * Crash
-    * Incident Location
-    * Vehicle
-      * Driver
-        * Role
-        * License
-      * Vehicle Identification Number
+* Crash
+  * Vehicle
+    * Vehicle Identification Number
+    * Driver
 
 ### Extract NIEM Components
 
