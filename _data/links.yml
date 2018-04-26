@@ -17,6 +17,8 @@ code_list_spec_folder:    https://reference.niem.gov/niem/specification/code-lis
 code_list_spec_base_name: https://reference.niem.gov/niem/specification/code-lists/4.0/niem-code-lists-4.0
 code_list_spec_repo:      https://github.com/NIEM/niem-code-lists-spec/
 
+tools_catalog: "https://www.niem.gov/tools-catalog"
+
 ssgt: https://tools.niem.gov/niemtools/ssgt/index.iepd
 ssgt_api: https://reference.niem.gov/niem/specification/web-services-api/
 
