@@ -26,23 +26,23 @@ The Mapping Document has the following characteristics:
 
 The following illustration shows the recommended structure of a mapping document.
 
-![Mapping Document Outline](mapping.png "Mapping Document Outline")
+![Mapping Document Template](mapping.png "Mapping Document Template")
 
-## Setting Up a Mapping Document
+## Mapping Document Setup
 
 Create a blank, nine-column spreadsheet with the headings shown in the previous illustration (Source Container Type, Source Element, etc.). Alternatively you can start with the [sample mapping document we provide](../assets/SampleEmptyMappingDocument.xlsx).
 
 In the following steps, identify (fill in) the **Source Data Columns**:
 
-## Source Data Columns
+### Source Data Columns (A)
 
-1. Identify a data object within the exisiting exchange content model. This is the **Source Container Type** (the containing object to which elements belong).
+1. Identify a data object within the exisiting exchange content model. This is the **Source Container Type**, which is the data source high-level object, class, or context of a set of data elements (e.g., person, vehicle, arrest) to which they belong.
 
-1. Identify an element within that object. This is the **Source Element**.
+1. Identify an element within that object. This is the **Source Element**, which is a specific data element that is associated with the Source Container Type.
 
-1. Identify the data type for the element. This is the **Source Data Type**.
+1. Identify the data type for the element. This is the **Source Data Type**, which is the data type (e.g., date, string) of the source element.
 
-1. Provide a definition for the element. This is the **Source Element Definition**.
+1. Provide a definition for the element. This is the **Source Element Definition**, which can be as descriptive as you want it to be.
 
 1. Repeat the previous steps for each object in the Exchange Content Model.
 
@@ -51,35 +51,47 @@ In the following steps, identify (fill in) the **Source Data Columns**:
 >
 >![Mapping Setup Example](mappingsetup.png "Mapping Setup Example")
 
-### Mapping and NIEM Data Columns
+### NIEM Data Columns (B) and Mapping Column (C)
 
-When you complete setting up the Source Data Columns, identify the NIEM elements that may have the same logical definition, semantics, and structure as the source elements.
+After you complete the entries in the Source Data Columns, identify the NIEM elements that may have the same logical definition, semantics, and structure as the source elements.
 
-The **Mapping** value is the degree to which a source element maps to a NIEM element. Possible values are the following:
+1. Use a NIEM tool (e.g., Schema Subset Generation Tool (SSGT)) to find an element from a NIEM reference schema that “maps” to the exchange data element. In this example, look for a "Property" with "personSSN" as the search string. In general, a "Property" search is a good place to start.
 
-| Value | What It Means |
-| --- | --- |
-| Equivalent | Semantics and structure map exactly or almost exactly.  The NIEM data object’s name and definition should have exactly the same conceptual meaning as the exchange data object. |
-| Partial | Partial Match is where you can take some things from NIEM and have to extend the rest for a given Type. In other words, when the semantics or structure of an exchange and NIEM data objects do not exactly fit. |
-| No Match | No exchange element or type maps to NIEM.  The result is an extension to NIEM through an IEPD extension schema. |
+1. If nothing is found that looks like a match, try searching by name, for synonyms, conceptual meaning, or by type. In this example, you found a possible match.<br>![Mapping Tool Example (SSGT)](ssgtexample.png "Mapping Tool Example (SSGT)")
 
-1. Use a NIEM tool (e.g., Schema Subset Generation Tool (SSGT)) to find an element from a NIEM reference schema that “maps” to the exchange data element. In this example, look for a "Property" with "personSSN" as the search string.
+1. Enter the match in the mapping document under "NIEM Element." Map objects that are conceptually and semantically equivalent. If the alignment is not easily understood, it is better to extend, which is explained in the schema [build and validate](../build-and-validate/ "Build and Validate") process.<br>![Element](mappingelement.png "Element")
 
-1. If nothing is found that looks like a match, try searching by name, for synonyms, conceptual meaning, or by type. In this example, a possible match is found.<br>![Mapping Tool Example (SSGT)](ssgtexample.png "Mapping Tool Example (SSGT)")
+1. Note the "type" associated with the NIEM element match and enter it under "NIEM Type."<br>![Element Type](mappingtype.png "Element Type")
 
-1. Enter the match in the mapping document under "NIEM Element." Map objects that are conceptually and semantically equivalent. If the alignment is not easily understood, it is better to extend, which is explained later in this section.<br>![Mapping Result Example (SSGT)](mappingelement.png "Mapping Result Example (SSGT)")
+1. Open "details" next to the element for the "NIEM Element Definition." This is the standard definition for the NIEM element found in the element’s metadata. Copy that information to the column.<br>![Element Definition](mappingdefinition.png "Element Definition")
 
-1. Note the type associated with the match and enter it under "NIEM Type."<br>![Mapping Result Example (SSGT)](mappingtype.png "Mapping Result Example (SSGT)")
+1. Determine the **Mapping** value, which is the degree to which a source element maps to a NIEM element. This can be a personal judgment. The possible values are the following:<br>
 
-1. Determine the type of mapping (equivalent, partial, no match). This can be a personal judgment. In this example, the match seems to be equivalent (the best type of match). Enter the "Equivalent" under "Mapping."<br>![Mapping Result Example (SSGT)](mappingcolumn.png "Mapping Result Example (SSGT)")
+    | Value | What It Means |
+    | --- | --- |
+    | Equivalent | Semantics and structure map exactly or almost exactly. The NIEM data object’s name, definition, and containing objects should have exactly the same conceptual meaning and logical alignment as the exchange data object.<br>For example,<br> **Person** (exchange data) matches to **nc:Person** (NIEM data object)<br>**Person First Name** (exchange data) matches to **nc:Person/nc:PersonName/nc:PersonGivenName** (NIEM data object) |
+    | Partial | A partial match occurs when you can take some things from NIEM and extend the rest for a given Type. In other words, the semantics or structure of exchange and NIEM data objects do not exactly fit. Partial matches can usually be categorized into three conflict categories. Mitigations exist for each of these categories that maintain the integrity of the NIEM data model.<br>**Semantic** - occurs when there is a small discrepancy in definition or name (e.g., **nc:Date** does not align exactly with **local-ns:EntryDate**). To mitigate, reuse the NIEM data type and create a local element.<br>**Structural** - occurs when the NIEM data object has constraints that disallow a direct mapping of the exchange data object (e.g., data type mismatches; code lists (enumeration facets) do not have all the necessary entries). To mitigate, reuse the NIEM element, and either create a new data type or extend a NIEM base type.<br>**Container** - occurs when an exchange data object hierarchy does not match the hierarchy of a desired NIEM data object (e.g., data object contains, or is contained within, elements or types that do not make logical sense or align well). To mitigate,	reuse the NIEM element or type but create local elements or types to contain them. |
+    | No Match | No exchange element or type maps to NIEM. Typically this is due to a "new" government or private sector issue or data object that has not made it into the model, or you have uncommon data, such as something very specific to a particular organization. The result is an extension to NIEM through an IEPD extension schema. |
 
-1. Click the **Add** button to begin the schema-creation process and to identify an element path. Open likely relationship trees until the terminal node is revealed.<br>![Mapping Result Example (SSGT)](mappingpath.png "Mapping Result Example (SSGT)")
+    {:.example}
+    >No Match - "Cargo Ship" has found a match that would otherwise be equivalent; except, it has a container or structural conflict.  It has this conflict because "Hazmat Indicator" is not found under "nc:Vessel" in the NIEM data model. Therefore, "Hazmat Indicator" has no match, and "Cargo Ship" is only a partial match.
+    >
+    >| Exchange Data | Mapping | NIEM Data Objects |
+    >| --- | --- | --- |
+    >| Cargo Ship | Partial Match | nc:Vessel |
+    >| Hazmat Indicator | No Match | nc:Vessel/local-ns:HazmatIndicator |
 
-1. Note the **Types** and **Elements** areas are populated when the **Add** button is clicked.<br>![Mapping Result Example (SSGT)](mappingadditions.png "Mapping Result Example (SSGT)")
+    In this example, the match is equivalent (the best type of match). Enter "Equivalent" under "Mapping."<br>![Mapping Column](mappingcolumn.png "Mapping Column")
 
-1. The "NIEM Element Path" is the joining together of the elements of the tree.<br>![Mapping Result Example (SSGT)](mappingfinal.png "Mapping Result Example (SSGT)")
+1. Click the expand button (next to **Add**) to open likely relationship trees until the terminal node is revealed.<br>![Expand the Tree](tree_expand.png "Expand the Tree")
 
-1. With the information you have now, you can begin the schema-generation and validation process.
+1. Click the **Add** button next to the likely elements to begin the schema-creation process and to identify an element path.<br>![Expanded Tree](mappingpath.png "Expanded Tree")
+
+1. Note the **Types** and **Elements** areas are populated when the **Add** button is clicked.<br>![Types and Elements Added](mappingadditions.png "Types and Elements Added")
+
+1. The "NIEM Element Path" is the path of the NIEM element within the NIEM model.  Join the tree elements together to make the path and enter that in the column.<br>![Element Path](mappingfinal.png "Element Path")
+
+1. With the information you have now, you can begin the schema [build and validate](../build-and-validate/ "Build and Validate") process.
 
 ### Model Searching Tips
 
@@ -92,7 +104,7 @@ Searching the NIEM model can be difficult, but these methods can help. Note that
 | Synonyms | Synonyms of the data object to find exactly what you seek. | Search for **Facility** instead of **Building** to get different results. |
 | Containers | Use a more abstract term to find containers of the data objects. | Search for **Person** instead of **Person Arrest** to get the maximum number of results. |
 
-### Notes on Reuse of the NIEM Data Model
+### NIEM Data Model Reuse Considerations
 
 The hierarchical implications of the model must be considered when reusing NIEM elements. NIEM’s hierarchal approach to modeling allows for flexibility and reuse, while still maintaining context.
 
@@ -104,90 +116,6 @@ The hierarchical implications of the model must be considered when reusing NIEM 
 
 ![Mapping Tool Example (SSGT)](mappingreuse.png "Mapping Tool Example (SSGT)")
 
-### Final Considerations
+### Additional Considerations
 
 You should include additional notes in the mapping document to provide reasoning and context. When mapping, be conservative in extending NIEM data objects to maintain the integrity of the NIEM data model.
-
-## Appendix
-
-### Source Data Columns (A)
-
-| Source Container Type | Source Element | Source Data Type | Source Element Definition |
-| --- | --- | --- | --- |
-| The data source high-level object, class, or context of a set of data elements (e.g., person, vehicle, arrest) | The source element is a specific data element that is associated with the Source Container Type | Data type of the source element | The definition of the source element being mapped |
-| **Example** |
-| Person | DateofBirth | Date | Date of birth of a person |
-
-### NIEM Data Columns (B)
-
-| NIEM Element | NIEM Element Path | NIEM Type | NIEM Element Definition |
-| --- | --- | --- | --- |
-| The name of the NIEM element the source element is mapped to | The path of the NIEM Element within the NIEM Model | The name of the type that is associated with the NIEM element | The standard definition for the NIEM element found in the element’s metadata |
-| **Example** |
-| nc:PersonBirthDate | nc:Person/nc:PersonBirthDate | nc:DateType | A date a person was born |
-
-### Mapping Column (C)
-
-In a Mapping Document, you must search the NIEM model for appropriate data elements to map to local exchange data. If a NIEM element is found, the correlation of the source and NIEM elements is recorded here.
-
-| Mapping |
-| --- |
-| Identifies how the source object or element maps to the NIEM object or element. |
-| **Example** |
-| Equivalent |
-
-{:.note}
->Equivalent Match
->
->- If a NIEM object has similar semantics and structure to an exchange data object, it is probably an equivalent match.
->- Equivalent matches can be difficult to find due to complex containers and different names.
->- As a first check, verify that the NIEM data object’s definition and its containing objects logically align to the exchange object.
-
-{:.example}
->Equivalent Match
->
->| Exchange Data | NIEM Data Objects |
->| --- | --- |
->| Person | nc:Person |
->| Person Name | nc:Person/nc:PersonName |
->| Person First Name | nc:Person/nc:PersonName/nc:PersonGivenName |
-
-{:.note}
->Partial Match
->
->- This match is the most difficult mapping to find in the NIEM data model. It is the gray area that exists between **Equivalent** and **No Match**.
->- Most partial matches can be categorized into three conflict categories:
->   - Semantic
->   - Structural
->   - Container
->- Mitigations exist for each of these three categorizes that will maintain the integrity of the NIEM data model.
->- In spite of these mitigations, there are cases where an exchange object will not map to the NIEM data model.
-
-{:.example}
-> Partial Match
->
-> | Conflict Description | Example(s) | Mitigation |
-> | --- | --- | --- |
-> | **Semantic:** Occurs when there is a small discrepancy in definition or name. | **nc:Date** does not align exactly with **local-ns:EntryDate** | Reuse the NIEM data type and create a local element. |
-> | **Structural:** Occurs when the NIEM data object has constraints that disallow a direct mapping of the exchange data object. | Data type mismatches.<br>Code lists (enumeration facets) do not have all necessary entries. | Reuse the NIEM element and either create a new data type or extend a NIEM base type. |
-> | **Container:** Occurs when an exchange data object hierarchy does not match the hierarchy of a desired NIEM data object. | Data object contains (or is contained within) elements or types that do not make logical sense or align well. | Reuse the NIEM element or type but create local elements or types to contain them. |
-
-{:.note}
->No Match
->
->- Similar to some partial matches, the result is an extension to NIEM contained in an IEPD extension schema.
->- When a **No Match** occurs, a new element is created for the exchange object.
->- A number of obvious cases will almost always have a **No Match**:
->   - Specific local information, such as code tables (enumeration facets).
->   - A “new” government or private sector issue or data object that has not made it into the model.
->   - Uncommon data, such as something very specific to a particular organization.
-
-{:.example}
->No Match
->
->| Exchange Data | Mapping Value* | NIEM Data Objects |
->| --- | --- | --- |
->| Cargo Ship | Partial Match | nc:Vessel |
->| Hazmat Indicator | No Match | nc:Vessel/local<br>ns:HazmatIndicator |
-
-\* **Mapping Value** is intended to show the difference between a Partial Match and No Match.
