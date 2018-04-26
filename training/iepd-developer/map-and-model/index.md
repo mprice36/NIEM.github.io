@@ -37,9 +37,13 @@ In the following steps, identify (fill in) the **Source Data Columns**:
 ## Source Data Columns
 
 1. Identify a data object within the exisiting exchange content model. This is the **Source Container Type** (the containing object to which elements belong).
+
 1. Identify an element within that object. This is the **Source Element**.
+
 1. Identify the data type for the element. This is the **Source Data Type**.
+
 1. Provide a definition for the element. This is the **Source Element Definition**.
+
 1. Repeat the previous steps for each object in the Exchange Content Model.
 
 {:.example}
@@ -60,13 +64,21 @@ The **Mapping** value is the degree to which a source element maps to a NIEM ele
 | No Match | No exchange element or type maps to NIEM.  The result is an extension to NIEM through an IEPD extension schema. |
 
 1. Use a NIEM tool (e.g., Schema Subset Generation Tool (SSGT)) to find an element from a NIEM reference schema that “maps” to the exchange data element. In this example, look for a "Property" with "personSSN" as the search string.
+
 1. If nothing is found that looks like a match, try searching by name, for synonyms, conceptual meaning, or by type. In this example, a possible match is found.<br>![Mapping Tool Example (SSGT)](ssgtexample.png "Mapping Tool Example (SSGT)")
+
 1. Enter the match in the mapping document under "NIEM Element." Map objects that are conceptually and semantically equivalent. If the alignment is not easily understood, it is better to extend, which is explained later in this section.<br>![Mapping Result Example (SSGT)](mappingelement.png "Mapping Result Example (SSGT)")
+
 1. Note the type associated with the match and enter it under "NIEM Type."<br>![Mapping Result Example (SSGT)](mappingtype.png "Mapping Result Example (SSGT)")
+
 1. Determine the type of mapping (equivalent, partial, no match). This can be a personal judgment. In this example, the match seems to be equivalent (the best type of match). Enter the "Equivalent" under "Mapping."<br>![Mapping Result Example (SSGT)](mappingcolumn.png "Mapping Result Example (SSGT)")
+
 1. Click the **Add** button to begin the schema-creation process and to identify an element path. Open likely relationship trees until the terminal node is revealed.<br>![Mapping Result Example (SSGT)](mappingpath.png "Mapping Result Example (SSGT)")
+
 1. Note the **Types** and **Elements** areas are populated when the **Add** button is clicked.<br>![Mapping Result Example (SSGT)](mappingadditions.png "Mapping Result Example (SSGT)")
+
 1. The "NIEM Element Path" is the joining together of the elements of the tree.<br>![Mapping Result Example (SSGT)](mappingfinal.png "Mapping Result Example (SSGT)")
+
 1. With the information you have now, you can begin the schema-generation and validation process.
 
 ### Model Searching Tips
