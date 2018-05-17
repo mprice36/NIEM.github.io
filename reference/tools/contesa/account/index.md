@@ -1,6 +1,8 @@
 ---
   title: ConTesA User Account
   short: Account
+  icon: fa-user-circle
+  description: Details about the ConTesA user accounts and management.
 ---
 
 {{ page.description }}
@@ -17,7 +19,7 @@ servers.
 The ConTesA home screen shows the options to either login or register for an account. From the login page, you must log into ConTesA with a registered user ID and password.
 
 [![Image of the ConTesA Login Page](assets/contesa_login.png
-   "ConTesA Login Page")]({{page.contesa_url}}/login})
+   "ConTesA Login Page")]({{site.data.links.contesa}}/login)
 
 - If you use a previously registered user ID and password, you are returned to the User Home Page.
 
@@ -26,7 +28,7 @@ The ConTesA home screen shows the options to either login or register for an acc
 - If you have not previously registered for a ConTesA account, then clicking on the "Register a New Account" link will take you to the registration page.
 
 [![Image of the ConTesA Account Registration Page](assets/contesa_registration.png
-   "ConTesA Account Registration Page")]({{page.contesa_url}}/registration})
+   "ConTesA Account Registration Page")]({{site.data.links.contesa}}/registration)
 
 -------------
 
