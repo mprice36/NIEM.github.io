@@ -67,6 +67,28 @@ The following procedure shows a way to create a wantlist from the modification o
 
 1. Generate a subset schema and a new wantlist.<br>![SSGT](schemasubset.png "SSGT")
 
+#### Create a Code List
+
+A code list is a tabular set of data. Each row is a "distinct entry" or set of code values. Each cell in the row has a value identified by its column header. The following table is an example of a code list for vehicle makes and models:
+
+| ExampleTemplateCode | | | |
+| --- | --- | --- | --- | --- |
+| Example Code List Definition | | | |
+| Make code | Make description | Model code | Model description | Class |
+| FORD | Ford | F15 | F-150 | Pickup |
+| HOND | Honda | CRV | CRV | SUV |
+| TOYT | Toyota | COA | Corolla | Auto |
+
+- The first row is the type name.
+- The second row is the code set definition.
+- The third row is the column labels.
+- Subsequent rows are the codes and definitions.
+
+To make the list suitable for an IEPD schema, you need to do the following:
+
+- Enter the codes and definitions into a comma-separated variable (csv) file.
+- Provide a uniform resource idenifier (URI)
+
 ## Validate XML Schemas
 
 ### XML Schema Conformance
