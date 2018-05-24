@@ -1,12 +1,8 @@
 ---
-  title: Explore Content
-  short: Explore
+  title: Overview of SSGT
+  short: Overview
+  icon: fa-university
 ---
-
-- TOC
-{:toc}
-
-## Overview
 
 The properties and types displayed in the search results are hyperlinked to display more detailed information about each component. This helps users navigate through the data model to find associated properties and to explore the model hierarchy.
 

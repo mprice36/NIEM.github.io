@@ -1,15 +1,11 @@
 ---
-  title: SSGT Options
+  title: SSGT Options Page
   short: Options
+  icon: fa-bars
   todo:
   - link to more wantlist info
   - link to individual nillable
 ---
-
-- TOC
-{:toc}
-
-## Overview
 
 The options page allows you to see which release is being used, change the selected release, and reload a subset (load wantlist) in order to make additional changes.
 

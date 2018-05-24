@@ -1,12 +1,8 @@
 ---
-  title: Searching the Model
+  title: Search and Explore NIEM
   short: Search
+  icon: fa-search
 ---
-
-- TOC
-{:toc}
-
-## Overview
 
 The Schema Subset Generation Tool (SSGT) search function allows you to:
 
