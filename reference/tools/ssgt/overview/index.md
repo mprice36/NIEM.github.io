@@ -16,8 +16,8 @@ Some additional information about properties and types may be viewed directly fr
 
 There are two ways to view the definition of a property or type from the search results page:
 
-1. **Hover** over a property or type link to see the definition for that component.
-2. Toggle the **`details`** link to show/hide definition.  Multiple details panels may be open at the same time.
+- Hover over a property or type link to see the definition for that component.
+- Toggle the **`details`** link to show/hide definition.  Multiple details panels may be open at the same time.
 
 ![Details Panel](./images/details.png)
 {:.bordered}

@@ -9,7 +9,7 @@
 
 The options page allows you to see which release is being used, change the selected release, and reload a subset (load wantlist) in order to make additional changes.
 
-Access the options page by clicking on "Options" in the SSGT menu bar:
+Access the options page by clicking on **`Options`** in the SSGT menu bar:
 
 ![SSGT Options Page](./images/options.png)
 
@@ -23,7 +23,7 @@ View which release the SSGT is currently using.  This will be the latest release
 
 ### Change Release
 
-By default, the SSGT is set to the latest NIEM release.  You can change the SSGT to use a different release by selecting a different one from the drop-down.
+By default, the SSGT is set to the latest NIEM release.  You can change the SSGT to use a different release by selecting a different one from the drop-down list.
 
 ![Change Release](./images/change-release.png)
 
@@ -34,7 +34,7 @@ By default, the SSGT is set to the latest NIEM release.  You can change the SSGT
 
 The SSGT does not provide user accounts.  Instead, the SSGT provides a wantlist file as part of a generated subset package that saves your list of selections.
 
-In order to resume work on a subset, this wantlist must be uploaded into the SSGT.  Click on "Choose File" to select your most recent "wantlist.xml" file, either generated individually or as part of a subset package (zip file).
+In order to resume work on a subset, this wantlist must be uploaded into the SSGT.  Click on **`Choose File`** to select your most recent "wantlist.xml" file, either generated individually or as part of a subset package (zip file).
 
 If you currently have components in your subset, you can choose to either merge or remove them when uploading a wantlist.
 
@@ -65,7 +65,7 @@ Schema example:
 </xs:element>
 ```
 
-By default, NIEM subsets are also set to allow nil values for all elements.  The default may be changed to `false` under "Wantlist Options" / "Change Nillable Default Value".
+By default, NIEM subsets are also set to allow nil values for all elements.  The default may be changed to **`false`** under **`Wantlist Options`** > **`Change Nillable Default Value`**.
 
 {:.note}
 > Nillable may also be set to true or false for each element individually when added to a subset, which will override the default value set here.
@@ -81,4 +81,4 @@ See the SSGT's [Web Services API](site.data.links.ssgt_api) specification for de
 
 ### Domain subsets
 
-You can add all of the content from a domain to your subset or download the domain subset directly under the "Namespaces" section.
+You can add all of the content from a domain to your subset or download the domain subset directly under the **`Namespaces`** section.

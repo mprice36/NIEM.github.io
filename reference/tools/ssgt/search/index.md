@@ -4,7 +4,7 @@
   icon: fa-search
 ---
 
-The Schema Subset Generation Tool (SSGT) search function allows you to:
+The Schema Subset Generation Tool (SSGT) search function allows you to do the following:
 
 - Enter search terms and view matching results in a data hierarchy format.
 - Navigate through the various data types, properties, namespaces, and facets and their relationships.
@@ -13,7 +13,7 @@ The Schema Subset Generation Tool (SSGT) search function allows you to:
 ![Search Page](./images/search-page.png)
 
 {:.note}
-> Click on the "Search" link to access the search page.
+> Click on the **`Search`** link to access the search page.
 
 ## Quick Search
 
@@ -21,25 +21,25 @@ Enter one or more terms into the search box for a default search of NIEM propert
 
 ## Basic Searches
 
-Change the selection in the drop-down box to change the search to:
+Change the selection in the drop-down box to change the search to one of the following:
 
 | Category    | Comments |
 | --------    | -------- |
-| Property    | Search NIEM elements and attributes (default) |
-| Type        | Search NIEM types |
-| Namespace   | Search namespace prefixes, target namespace URIs, and definitions |
-| Facet       | Search code values and definitions |
-| External    | Search external element names and definitions |
-| Association | Search association element names and definitions |
+| Property    | Search NIEM elements and attributes (default). |
+| Type        | Search NIEM types. |
+| Namespace   | Search namespace prefixes, target namespace URIs, and definitions. |
+| Facet       | Search code values and definitions. |
+| External    | Search external element names and definitions. |
+| Association | Search association element names and definitions. |
 
 ## Advanced Searches
 
-Click the toggle link `Show Advanced` / `Hide Advanced` to show or hide the advanced search options.
+Click the toggle link **`Show Advanced`** / **`Hide Advanced`** to show or hide the advanced search options.
 
 ![Advanced Search](./images/advanced-search-link.png)
 {:.bordered}
 
-Once the `Show Advanced` link has been clicked, the following options will appear:
+When you click the **`Show Advanced`** link, the following options will appear:
 
 ![Advanced Search](./images/advanced-search-options.png)
 {:.bordered}
@@ -56,7 +56,7 @@ Once the `Show Advanced` link has been clicked, the following options will appea
 
 ## Tips for better searches
 
-- Uses spaces between terms
-- Do not include namespace information (like the prefix) in the search
-- Narrow down search results by using the advanced search if too many results are returned
+- Uses spaces between terms.
+- Do not include namespace information (e.g., nc:) in the search.
+- Narrow down search results by using the advanced search if too many results are returned.
 - Look through the components of any types that match your requirements - results may sometime appear as inherited elements (e.g., nc:ArrestType inherits element nc:ActivityDate) or augmentations (additional related properties defined in other namespaces).
