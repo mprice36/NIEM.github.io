@@ -23,31 +23,11 @@ It is recommended that you start with tools and modify as needed.
 
 ### The NIEM Tools Catalog
 
-The NIEM Tools catalog is a collection of different tools that aid in schema generation. The Code List Generator (CLG), for example, provides you with the ability to build an XML schema file for code sets from an Excel spreadsheet. The Subset Schema Generation Tool (SSGT) is often used to start schema development because it is easy to use and produces subset schemas for use within an exchange. The SSGT can also be used for searching and browsing the NIEM data model and generating Wantlists.
+The NIEM Tools catalog is a collection of different tools that aid in schema generation. The Code List Generator (CLG), for example, provides you with the ability to build an XML schema file for code sets from an Excel spreadsheet. The Subset Schema Generation Tool ([SSGT](/reference/tools/ssgt/)) is often used to start schema development because it is easy to use and produces subset schemas and wantlists for use within an exchange. The SSGT can also be used for searching and browsing the NIEM data model and generating Wantlists.
 
 Look for an appropriate tool at the [NIEM Tools Catalog](https://www.niem.gov/tools-catalog "NIEM Tools Catalog").
 
-#### Create a New Wantlist
-
-The following procedure shows a way to create a new wantlist.
-
-1. Use the mapping document information you created in the [map and model](../map-and-model/ "Map and Model") process.<br>![Types and Elements Added](mappingadditions.png "Types and Elements Added")
-
-1. In the Schema Subset Generation Tool (SSGT), click "Generate Documents."<br>![Generate Documents](generatedocuments.png "Generate Documents")
-
-1. In the "Generate Subset Schema section, click "Save Subset Schema to a file" and "Save current wantlist to a file." The files are saved in your Documents folder with the current date and time as part of the file name.<br>![Generate Documents](generateschemawantlist.png "Generate Documents")
-
-#### Generate a Wantlist from an Existing List
-
-The following procedure shows a way to create a wantlist from the modification of an existing wantlist.
-
-1. Click "Options" to load a wantlist into the SSGT.<br>![SSGT](SSGTtoolbar.png "SSGT")<br>![SSGT](schemawantlist.png "SSGT")
-
-1. Make changes to the wantlist in the Search section of the SSGT.
-
-1. Generate a subset schema and a new wantlist.<br>![SSGT](schemasubset.png "SSGT")
-
-#### Create a Code List
+### Create a Code List
 
 A code list is a tabular set of data. Each row is a "distinct entry" or set of code values. Each cell in the row has a value identified by its column header. The following table is an example of a code list for vehicle makes and models:
 

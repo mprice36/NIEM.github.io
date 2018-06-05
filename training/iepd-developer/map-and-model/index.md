@@ -55,7 +55,7 @@ In the following steps, identify (fill in) the **Source Data Columns**:
 
 After you complete the entries in the Source Data Columns, identify the NIEM elements that may have the same logical definition, semantics, and structure as the source elements.
 
-1. Use a NIEM tool (e.g., Schema Subset Generation Tool (SSGT)) to find an element from a NIEM reference schema that “maps” to the exchange data element. In this example, look for a "Property" with "personSSN" as the search string. In general, a "Property" search is a good place to start.
+1. Use a NIEM tool (e.g., Schema Subset Generation Tool ([SSGT](/reference/tools/ssgt/)) to find an element from a NIEM reference schema that “maps” to the exchange data element. In this example, look for a "Property" with "personSSN" as the search string. In general, a "Property" search is a good place to start.
 
 1. If nothing is found that looks like a match, try searching by name, for synonyms, conceptual meaning, or by type. In this example, you found a possible match.<br>![Mapping Tool Example (SSGT)](ssgtexample.png "Mapping Tool Example (SSGT)")
 
