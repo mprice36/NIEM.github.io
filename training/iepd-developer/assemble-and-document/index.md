@@ -79,9 +79,30 @@ A standardized file structure promotes consistency and creates logical navigatio
 1. **File** each artifact in a logical, consistent folder structure.
 1. **Archive** (e.g., zip) the file structure, including artifacts, into the final package.
 
-The following illustration shows a recommended IEPD folder structure. Note that the documentation produced by the [SSGT](/reference/tools/ssgt/) creates most of the structure for you.
+The following example shows a recommended IEPD folder structure and file location. Note that the documentation produced by the [SSGT](/reference/tools/ssgt/) creates some of the structure for you.
 
-![Example IEPD Folder Structure](folderstructure.png "Example IEPD Folder Structure")
+{:.example}
+>The root directory name should be meaningful and include the NIEM version and a revision number.
+>
+>my-iepd-4.0-rev-04
+>- documentation (miscellaneous, binaries)
+>- iep-samples
+>- xsd
+>    - wantlist.xml
+>    - xml-catalog.xml
+>  - extension
+>  - niem
+>    - appinfo/4.0
+>    - conformanceTargets/4.0
+>    - localTerminology/4.0
+>    - niem-core/4.0
+>    - proxy/xsd/4.0
+>    - structures/4.0
+>- schematron (if Schematron is used)
+>- changelog.txt (.md, .htm, .pdf; should be in root directory)
+>- conformance-assertion.txt (.md, .htm, .pdf; should be in root directory)
+>- mpd-catalog.xml (must be in root directory)
+>- readme.txt (.md, .htm,  .pdf; should be in root directory)
 
 ## Review the IEPD
 
