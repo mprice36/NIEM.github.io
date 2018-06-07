@@ -27,7 +27,7 @@ There are two ways to view the definition of a property or type from the search 
 In the list of search results, click the **`+`** button to the left of the component to see the sub-properties that the type contains.
 
 {:.example}
-> View the list of sub-properties for `nc:LengthMeasure`:
+> View the list of sub-properties for **`nc:LengthMeasure`:
 
 ![Sub-Properties List](./images/subproperties.png)
 {:.bordered}
@@ -40,7 +40,7 @@ Once the sub-property list is expanded, a **`show inheritance`** link will appea
 Each parent type may also be expanded to display their sub-properties.
 
 {:.example}
-> After clicking `show inheritance` and the expand button, the list of sub-properties for `nc:MeasureType` (the parent type for `nc:LengthMeasureType`) is displayed.  These properties will be inherited:
+> After clicking **`show inheritance`** and the expand button, the list of sub-properties for **`nc:MeasureType`** (the parent type for **`nc:LengthMeasureType`**) is displayed.  These properties will be inherited:
 
 ![Type Inheritance List](./images/inheritance.png)
 {:.bordered}
@@ -57,7 +57,7 @@ For abstract elements, click the **`+`** button to view a list of available subs
 Clicking on a property link will take you to a page with more information about that property.  Commonly available information includes the definition, the type of the property, and any types that the property may be contained in.
 
 {:.example}
-> Page for property `nc:PersonName`
+> Page for property **`nc:PersonName`**
 
 ![Property Page](./images/property-page.png)
 {:.bordered}
@@ -69,13 +69,13 @@ Clicking on a type link will take you to a page with more information about that
 Further information on the page will vary based on what kind of type it is.  The page may display a list of sub-properties, codes, or other facets, as applicable.
 
 {:.example}
-> Page for type `nc:LengthMeasureType` (type contains sub-properties)
+> Page for type **`nc:LengthMeasureType`** (type contains sub-properties)
 
 ![Type Page with Sub-Properties](./images/type-page-subproperties.png)
 {:.bordered}
 
 {:.example}
-> Page for type `unece:LengthCodeSimpleType` (type contains codes)
+> Page for type **`unece:LengthCodeSimpleType`** (type contains codes)
 
 ![Type Page with Codes](./images/type-page-codes.png)
 {:.bordered}
