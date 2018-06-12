@@ -6,9 +6,6 @@ links:
   - url: /reference/specifications/code-lists/genericode/
 ---
 
-- TOC
-{:toc}
-
 {% include_relative intro/index.md %}
 
 ## Examples
@@ -28,9 +25,51 @@ TOYT | Toyota | CAM | Camry | Auto
 
 CSVs may be linked to a URI via an XML catalog file.
 
-### Static binding
+### Run-Time (Dynamic) Binding
 
-The XML schema example below creates static, design-time bindings between the elements and and CSVs.  URIs and column names are used to indicate the particular set of valid code values.
+The example below shows an XML schema snippet that creates two code elements of type `nc:CodeType`.  This type enables code list information to be provided in instance messages.
+
+```xml
+  <xs:element name="VehicleMakeCode" type="nc:CodeType"
+              substitutionGroup="nc:VehicleMakeAbstract">
+    <xs:annotation>
+      <xs:documentation>A code for a manufacturer of a vehicle.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+
+  <xs:element name="VehicleModelCode" type="nc:CodeType"
+              substitutionGroup="nc:VehicleModelAbstract">
+    <xs:annotation>
+      <xs:documentation>A code for a model of a vehicle.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+```
+
+The example below is an XML instance based on the schema snippet above:
+
+{:.note}
+> Because the schema does not identify a URI or column name of a code set, this information must be provided by the instance.
+
+```xml
+<?xml version="1.0" encoding="US-ASCII" standalone="yes"?>
+<nc:Vehicle
+    xmlns:cli="http://reference.niem.gov/niem/specification/code-lists/4.0/code-lists-instance/"
+    xmlns:ext="http://example.org/namespace/extension-run-time"
+    xmlns:nc="http://release.niem.gov/niem/niem-core/4.0/">
+  <ext:VehicleMakeCode
+      cli:codeListURI="http://example.org/code-list/vehicle-make-model"
+      cli:codeListColumnName="make"
+    >DODG</ext:VehicleMakeCode>
+  <ext:VehicleModelCode
+      cli:codeListURI="http://example.org/code-list/vehicle-make-model"
+      cli:codeListColumnName="model"
+    >R15</ext:VehicleModelCode>
+</nc:Vehicle>
+```
+
+### Schema-Time (Static) Binding
+
+The XML schema example below creates static, schema-time bindings between the elements and and CSVs. URIs and column names are used to indicate the particular set of valid code values.
 
 ```xml
   <xs:element name="Vehicle" type="nc:VehicleType"
@@ -86,48 +125,6 @@ The example below is an XML instance based on the schema snippet above:
   <ext:VehicleMakeCode>DODG</ext:VehicleMakeCode>
   <ext:VehicleModelCode>R15</ext:VehicleModelCode>
 </ext:Vehicle>
-```
-
-### Run-time binding
-
-The example below shows an XML schema snippet that creates two code elements of type `nc:CodeType`.  This type enables code list information to be provided in instance messages.
-
-```xml
-  <xs:element name="VehicleMakeCode" type="nc:CodeType"
-              substitutionGroup="nc:VehicleMakeAbstract">
-    <xs:annotation>
-      <xs:documentation>A code for a manufacturer of a vehicle.</xs:documentation>
-    </xs:annotation>
-  </xs:element>
-
-  <xs:element name="VehicleModelCode" type="nc:CodeType"
-              substitutionGroup="nc:VehicleModelAbstract">
-    <xs:annotation>
-      <xs:documentation>A code for a model of a vehicle.</xs:documentation>
-    </xs:annotation>
-  </xs:element>
-```
-
-The example below is an XML instance based on the schema snippet above:
-
-{:.note}
-> Because the schema does not identify a URI or column name of a code set, this information must be provided by the instance.
-
-```xml
-<?xml version="1.0" encoding="US-ASCII" standalone="yes"?>
-<nc:Vehicle
-    xmlns:cli="http://reference.niem.gov/niem/specification/code-lists/4.0/code-lists-instance/"
-    xmlns:ext="http://example.org/namespace/extension-run-time"
-    xmlns:nc="http://release.niem.gov/niem/niem-core/4.0/">
-  <ext:VehicleMakeCode
-      cli:codeListURI="http://example.org/code-list/vehicle-make-model"
-      cli:codeListColumnName="make"
-    >DODG</ext:VehicleMakeCode>
-  <ext:VehicleModelCode
-      cli:codeListURI="http://example.org/code-list/vehicle-make-model"
-      cli:codeListColumnName="model"
-    >R15</ext:VehicleModelCode>
-</nc:Vehicle>
 ```
 
 ## Links

@@ -1,5 +1,5 @@
 
-The [NIEM Code Lists Specification]({{site.data.links.code_list_spec}}) was published in June 2016 and updated in November 2017. It was created to enhance the functionality of code lists in NIEM beyond the basic enumerations that XML and JSON schema provide (simple sets of schema-defined code values and definitions).
+The [NIEM Code Lists Specification]({{site.data.links.code_list_spec}}) was created to enhance the functionality of code lists in NIEM beyond the basic enumerations that XML and JSON schema provide (simple sets of schema-defined code values and definitions).
 
 This specification provides:
 
@@ -17,6 +17,6 @@ This specification provides:
 
 | Role | Use Cases |
 | ---- | --- |
-| Domain modeler | Define enhanced code lists in a domain |
-| IEPD developer | Define enhanced code lists for an exchange <br> Specify static bindings for NIEM code lists (e.g., GENC) |
-| IEPD implementer | Interpret static or run-time code list bindings <br> Specify run-time bindings |
+| Domain Modeler | Define enhanced code lists in a domain |
+| IEPD Developer | Define enhanced code lists for an exchange <br> Specify static bindings for NIEM code lists (e.g., GENC) |
+| IEPD Implementer | Interpret static or run-time code list bindings <br> Specify run-time bindings |
