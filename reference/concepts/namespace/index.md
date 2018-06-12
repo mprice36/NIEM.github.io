@@ -8,9 +8,6 @@
     - url: /reference/concepts/namespace/json/
 ---
 
-- TOC
-{:toc}
-
 ## Overview
 
 {% include_relative intro/index.md %}
@@ -21,13 +18,14 @@ By convention, NIEM categorizes release namespaces.  This makes schemas easier t
 
 | Namespace | Count | Description |
 | --------- |:-----:| ----------- |
-| Core      |  1 | Defines general properties and types that do not belong to a specific subject area |
-| Domain    | 14 | Defines properties and types specific to a given subject area |
-| Code      | 36 | Provides NIEM-conformant representations of code sets that are typically defined and managed outside of NIEM |
-| Adapter   |  4 | Defines adapter components (the NIEM mechanism to reuse non-conformant external standards in a conformant way)  |
-| External  | 5* | A namespace from an external standard that is not NIEM conformant |
-| Proxy     |  1 | Defines complex types corresponding to standard XML Schema simple types  |
-| Utility   |  4 | Provides components needed to support NIEM methodologies  |
+| Core      |  1 | Defines general properties and types (e.g., person, organization, activity) that do not belong to a specific subject area. Objects defined in Core leverage base XML objects defined in the Proxy and Structures schemas, and can be used as base objects for definitions in domain-specific schemas as well as extension schemas. |
+| Domain    | 14 | Defines properties and types specific to a given subject area. |
+| Code      | 36 | Provides NIEM-conformant representations of code sets that are typically defined and managed outside of NIEM. |
+| Adapter   |  4 | Defines adapter components (the NIEM mechanism to reuse non-conformant external standards in a conformant way). |
+| External  | 5* | Defines a namespace from an external standard that is not NIEM conformant. External standards are integrated into NIEM through the schemas in this namespace. |
+| Proxy     |  1 | Defines complex types corresponding to standard XML Schema simple types. |
+| Utility   |  4 | Provides components needed to support NIEM methodologies. |
+| Support | 1 | Defines the underlying standardized structure for data objects in NIEM. Each of the data objects in the other namespaces reuse the basic data objects in Support.<br>`structures` contains NIEM base types to provide a set of generic types from which all types should derive.<br>`appinfo` contains definitions used in high-level data modeling and also for validation of NIEM-conformant instances. |
 
 \* - External standards are sometimes made up of multiple namespaces.  The count above simply lists the number of external standards in NIEM, not the total number of namespaces they represent.
 
@@ -35,6 +33,10 @@ By convention, NIEM categorizes release namespaces.  This makes schemas easier t
 - See the [training content pages](../../content) to get an overview of the content in these namespaces.
 
 An IEPD is typically made up of subsetted versions of NIEM release namespaces, plus one or more local namespaces containing user-defined properties and types.  These user-defined namespaces are often referred to as **extension** namespaces.
+
+{:.example}
+>The Domain namespace category Layer provides a mission-based and domain-specific layer of data objects that specialize base objects from the NIEM Core and structures namespaces.
+>![Domain Abstraction Layer](domainabstractionlayer.png "Domain Abstraction Layer")
 
 ### Representations
 
