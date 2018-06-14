@@ -3,6 +3,7 @@
   icon: fa-sitemap
   description: Learn more about NIEM, including the model, IEPDs, tools, specifications.
   links:
+    - url: /reference/artifacts/
     - url: /reference/concepts/
     - url: /reference/content/
     - url: /reference/releases/
