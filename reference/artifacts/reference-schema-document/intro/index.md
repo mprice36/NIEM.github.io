@@ -15,7 +15,7 @@ Reference schema documents are one of the principle NIEM artifacts. They provide
 > - Does not use XML Schema's restriction mechanism **`xs:restriction`**.
 > - Made as regular and simple as possible.
 
-| ConTesA User | Use Cases |
+| User | Use Cases |
 | --------- | --------- |
 | [Domain Modeler](/training/domain-modeler) | Create a set of reuseable components defining conformance to the domain structure. |
 | [IEPD Developer](/training/iepd-developer) | Normalize broadly reuseable schema components relavent to future IEPDs. |
