@@ -4,7 +4,7 @@
   description: NIEM artifacts
   links:
   - url: /reference/artifacts/extension-schema-document/
-  - url: /reference/artifacts/reference-schema-document/
+  - url: /reference/artifacts/reference-vs-extension/
 ---
 
 TBD
