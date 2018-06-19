@@ -7,12 +7,12 @@
 {{page.description}}
 
 Once content has been uploaded to ConTesA, a conformance report is
-produced. It contains the output of how a users content performed in
+produced. It contains the output of how the content performed in
 evaluation against the NIEM NDR automated rules.
 
 {:.tip}
 > You can download the prepackaged assets for this tutorial by clicking
-> [this link](assets/case-1_assets.zip).
+> [this link](assets/package-assets.zip).
 
 ## Case 1: XML Schema with No Errors
 
@@ -26,7 +26,7 @@ ConTesA.
   "Crash Model XSD Conformance Report")
 
 Notice the report produces a graphic of the proportion of automated
-rules passed, failed, and run. I also specifically identifies which
+rules passed, failed, and run. It also specifically identifies which
 rules were passed and which failed.
 
 ## Case 2: XML Schema with Errors
@@ -39,9 +39,9 @@ we've injected some errors:
 ![Image of Crash Model Bad XSD Conformance Report](assets/crash_model_bad_errors.png
   "Crash Model Bad XSD Conformance Report")
 
-Notice that a list of errors and the line number where they occur
-appear on this page. The errors produce methods an explanation of
-why the error is occurring and thus suggests how to fix it.
+Notice that a list of violated rules and the line number where the error occurs
+appear on this page. The rule's message explains the error and thus suggests how to
+fix it.
 
 ## Case 3: XML Schema Instance
 
