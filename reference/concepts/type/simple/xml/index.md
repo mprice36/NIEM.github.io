@@ -3,9 +3,6 @@
   short: XML
 ---
 
-- TOC
-{:toc}
-
 ## Instance example
 
 The following is an example of attribute `nc:personNameInitialIndicator`.  It has simple type `xs:boolean`.
@@ -15,7 +12,7 @@ The following is an example of attribute `nc:personNameInitialIndicator`.  It ha
 ```
 
 {: .note}
-- The attribute has a simple value, the boolean "true".
+>The attribute has a simple value: the boolean "true".
 
 ## Schema example
 
@@ -43,7 +40,7 @@ This example shows a subset of `nc:AddressCategoryCodeSimpleType`.
 
 ## Schema template
 
-This template shows the creation of a simple type with an enumeration.  Other kinds of [facets](../../../facet) could be used instead.
+This template shows the creation of a simple type with an enumeration.  Other kinds of [facets](/reference/concepts/facet) could be used instead.
 
 ```xml
 <xs:simpleType name="NAMESimpleType">

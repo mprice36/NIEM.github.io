@@ -12,9 +12,6 @@
     - number: 11-5
 ---
 
-- TOC
-{:toc}
-
 ## Overview
 
 {{ page.description }}
@@ -37,11 +34,11 @@ The name of a list type should end with the representation term "ListSimpleType"
 
 ### Schema example
 
-The following example shows the declarations of:
+The following example shows the declarations of
 
-- a simple list type
-- a complex type with simple content based on the simple list type
-- an element with the complex type
+- a simple list type,
+- a complex type with simple content based on the simple list type, and
+- an element with the complex type.
 
 ```xml
 <xs:simpleType name="DecimalListSimpleType">

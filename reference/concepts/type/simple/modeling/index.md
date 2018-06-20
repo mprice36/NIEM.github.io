@@ -14,15 +14,13 @@
     - number: 11.1.2
 ---
 
-- TOC
-{:toc}
-
 ## Name
 
-A simple type name must with with the representation term "SimpleType".
+A simple type name must end with the representation term "SimpleType".
 
 ## References
 
-See additional guidance for [names](../../../property/modeling/names/){:target="_blank"} and [definitions](../../../property/modeling/definitions/){:target="_blank"}.
+See additional guidance for [names](/reference/concepts/property/modeling/names/){:target="_blank"}
+and [definitions](/reference/concepts/property/modeling/definitions/){:target="_blank"}.
 
 {% include ndr-references.html list=page.ndr %}

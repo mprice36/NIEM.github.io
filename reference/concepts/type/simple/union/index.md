@@ -13,9 +13,6 @@
     - number: 11-6
 ---
 
-- TOC
-{:toc}
-
 ## Overview
 
 {{ page.description }}
@@ -24,7 +21,7 @@ A union type defines a list of simple types as its members.  A value allowed by 
 
 The benefit that this provides is reuse.  Rather than needing to duplicate values, types can be reused in combination instead.
 
-One kind of use case for a union is for situations when an existing code set provides some but not all of the values that are needed.  One option is to create a code set with just the missing values, create a union type that combines the original codes with the new codes, and create a new element based on the union type.
+One kind of use case for a union is for situations when an existing code set provides some, but not all, of the values that are needed. One option is to create a code set with just the missing values, create a union type that combines the original codes with the new codes, and create a new element based on the union type.
 
 ## XML
 
