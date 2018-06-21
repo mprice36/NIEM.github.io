@@ -1,5 +1,6 @@
 ---
   title: Training
+  layout: 'landing_page'
   links:
   - url: /reference/concepts/
     group: topics
@@ -12,11 +13,14 @@
   - url: /reference/specifications/
     group: topics
   - url: /training/domain-modeler/
-    group: tracks
+    button: 'Begin training'
   - url: /training/iepd-developer/
-    group: tracks
+    button: 'Begin training'
   - url: /training/iepd-implementer/
-    group: tracks
+    button: 'Begin training'
+  topics:
+  - url: /model/
+    button: 'Begin training'
   todo: Elaborate on intro and roles; add old training materials
 ---
 
@@ -40,12 +44,10 @@ If you are just getting started, please head over to the main site at [niem.gov]
 
 ## Reference Material (General topics) 
 
-{% assign topicLinks = page.links | where: "group", "topics" %}
-{% include icon-list.html links=topicLinks %}
+{% include section-list.html sections=page.topics %}
 
 ## Training tracks
 
 Choose from below for the kind of materials that will best fit your role in using NIEM:
 
-{% assign trackLinks = page.links | where: "group", "tracks" %}
-{% include icon-list.html links=trackLinks %}
+{% include section-list.html sections=page.links %}
