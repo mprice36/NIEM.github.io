@@ -1,5 +1,6 @@
 ---
   title: Normative Rules and Guidelines
+  layout: 'landing_page'
   icon: fa-cog
   links:
     - url: /normative-rules-guidelines/core-supplement/
@@ -8,4 +9,4 @@
       icon: fa-gavel
 ---
 
-{% include icon-list.html links=page.links %}
+{% include section-list.html sections=page.links %}

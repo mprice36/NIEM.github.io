@@ -19,14 +19,11 @@
     - number: 11-44
 ---
 
-- TOC
-{:toc}
-
 ### Extension
 
 A CSC type must extend either a simple type or another CSC type.
 
-### structures attributes
+### Structures attributes
 
 A CSC type that extends a simple type must also include a reference to `structures:SimpleObjectAttributeGroup`.  This is an attribute group that contains all of the attributes needed to support the NIEM infrastructure.
 

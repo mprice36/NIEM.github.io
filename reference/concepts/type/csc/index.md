@@ -20,23 +20,24 @@ While there are few special requirements in order to use attributes along with c
 
 The `niem-xs` namespace is a proxy namespace, which provides alternate complex type representations for XML Schema base types.
 
-XML Schema defines fundamental types, like `xs:string`, `xs:integer`, `xs:date`, and `xs:boolean`, but these are simple types.  NIEM creates corresponding complex types with simple content.
+XML Schema defines fundamental types like `xs:string`, `xs:integer`, `xs:date`, and `xs:boolean`, but these are simple types.  NIEM creates corresponding complex types with simple content.
 
 {: .example}
-> Type `niem-xs:boolean` is a complex type with simple content.  It is based on the XML Schema simple type `xs:boolean`, which represents a true/false value.  It also adds attributes from the `structures` namespace to support the NIEM infrastructure.
+> Type `niem-xs:boolean` is a complex type with simple content.  It is based on the XML Schema simple type `xs:boolean`, which represents a true or false value.  It also adds attributes from the `structures` namespace to support the NIEM infrastructure.
 
 ## Code sets
 
-Similar to the corresponding `niem-xs` proxy types (CSCs) and XML Schema simple types, code sets are created in NIEM as two corresponding types.
+Similar to the corresponding `niem-xs` proxy types (CSCs) and XML Schema simple types, code sets are created in NIEM as two corresponding types:
 
-1. A simple type is created to define the code set via enumeration [facets](../../facet).  Since the type is simple, it can only contain a value; it cannot contain attributes.
-1. A second type, a CSC type, is created.  Since a CSC type is complex, it can contain attributes, and since it has simple content, it can carry value.  The CSC type extends the original simple type with the facets and adds attributes from the `structures` namespace to support the NIEM infrastructure.
+- A simple type is created to define the code set via enumeration [facets](../../facet).  Since the type is simple, it can only contain a value; it cannot contain attributes.
+- A second type, a CSC type, is created.  Because a CSC type is complex, it can contain attributes, and because it has simple content, it can carry value.  The CSC type extends the original simple type with the facets and adds attributes from the `structures` namespace to support the NIEM infrastructure.
 
 {: .example}
-- Simple type `nc:AddressCategoryCodeSimpleType` defines enumerations like `business` and `residential`.
-- CSC type `nc:AddressCategoryCodeType` extends the simple type with the facets, and adds attributes from `structures`.
+>
+>- Simple type `nc:AddressCategoryCodeSimpleType` defines enumerations like `business` and `residential`.
+>- CSC type `nc:AddressCategoryCodeType` extends the simple type with the facets, and adds attributes from `structures`.
 
-As these types correspond so closely to each other, the names and definitions tend to be very similar.  The key distinction is the addition of "Simple" to the simple type's name.
+Because these types correspond so closely to each other, the names and definitions tend to be very similar.  The key distinction is the addition of "Simple" to the simple type's name.
 
 To assign a code set to an element, the element must have the CSC version of the type.  This allows the element to use both the code set and any attributes that may be needed.
 

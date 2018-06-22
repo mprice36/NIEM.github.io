@@ -3,10 +3,7 @@
   short: JSON
 ---
 
-- TOC
-{:toc}
-
-JSON does not have a syntax that directly corresponds to attributes or CSC types.  In this case, any attributes must be treated like regular properties and a name must be assigned to a newly-created property that carries the type's original simple content.  NIEM uses `rdf:value` as this name.
+JSON does not have a syntax that directly corresponds to attributes or CSC types.  In this case, any attributes must be treated like regular properties, and a name must be assigned to a newly-created property that carries the type's original simple content.  NIEM uses `rdf:value` as this name.
 
 ## Instance example
 

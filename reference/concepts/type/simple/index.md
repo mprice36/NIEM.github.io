@@ -12,7 +12,10 @@
       group: kind
 ---
 
+{% capture doggie %}
 {% include_relative intro/index.md %}
+{% endcapture %}
+{{ doggie | markdownify}}
 
 ## Provided types
 
