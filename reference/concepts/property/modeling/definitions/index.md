@@ -20,9 +20,6 @@
     - number: 11.6
 ---
 
-- TOC
-{:toc}
-
 The following provides rules and guidance for constructing property definitions.
 
 ### Required
@@ -38,7 +35,7 @@ Definitions are meant to be human-readable.
 Definitions should provide more information than the terms in the property's name, when possible.
 
 {: .note}
-> In some cases, a property name may be so obvious (e.g., `PersonHairColorText`) that attempts to provide synonyms or alternate phrasing would be counterproductive.  A definition does not have to be needlessly elaborate, so long as the the property name would be obvious to the general public.
+> In some cases, a property name may be so obvious (e.g., `PersonHairColorText`) that attempts to provide synonyms or alternate phrasing would be counterproductive.  A definition does not have to be elaborate if the property name would be obvious to the general public.
 
 ### Unique
 
@@ -52,7 +49,7 @@ Each data component definition must be unique from all others and distinguishabl
 Definitions of a part do not need to redefine the whole.
 
 {: .example}
-> Definitions for elements like `nc:PersonHairColorText`, `nc:PersonName`, and `nc:PersonAgeMeasure` do not need to each define what a person is.  That should be defined once, by element `nc:Person`.
+> Definitions for elements like `nc:PersonHairColorText`, `nc:PersonName`, and `nc:PersonAgeMeasure` do not need to each define what a person is.  That should be defined once by element `nc:Person`.
 
 ### No type info
 
@@ -67,7 +64,8 @@ There may be a few cases where providing such information is essential to the se
 
 ### Standard opening phrases
 
-Definitions of properties with simple content or designated types should use a standard opening phrase as defined by the NDR.  See the [reference table](../table) for more.
+Definitions of properties with simple content or designated types should use a standard opening phrase as defined by the NDR.
+See the [Reference Table](/reference/concepts/property/modeling/table) for more.
 
 ### Begin with "A(n)"
 
