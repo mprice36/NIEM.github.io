@@ -12,15 +12,15 @@
       group: kind
 ---
 
-- TOC
-{:toc}
-
 {% include_relative intro/index.md %}
 
-Types tend to be less specific than properties - that is by design.  It increases reusability.
+Types tend to be less specific than properties. That is by design in order to
+increase reusability.
 
 {: .example}
-> Properties `nc:PersonBirthDate`, `nc:ActivityDate` and `it:ItineraryDepartureDate` are all dates and can each reuse the same type - `nc:DateType`.
+>The properties `nc:PersonBirthDate`, `nc:ActivityDate`, and
+>`it:ItineraryDepartureDate` are all dates and can each reuse the same `nc:DateType`
+>type.
 
 ## Kinds
 

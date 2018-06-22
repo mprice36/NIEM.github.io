@@ -9,10 +9,11 @@ Properties may be more commonly known as as elements, attributes, fields, tags, 
 On its own, a property has meaning but no inherent structure.
 
 {: .example}
-- Without a type, any kind of value could be provided for property `PersonBirthDate` above, including:
-- 06/30/1950
-- 1950-06-30
-- June 30th, 1950
-- green (without a type, any value is valid)
+>
+> Without a type, any kind of value could be provided for property `PersonBirthDate` above, like the following:
+>- 06/30/1950
+>- 1950-06-30
+>- June 30th, 1950
+>- green (without a type, any value is valid)
 
 A property must have an assigned type in order to have both clear semantics and a well-defined structure.

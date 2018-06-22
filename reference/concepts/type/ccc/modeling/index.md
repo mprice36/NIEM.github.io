@@ -39,12 +39,9 @@
     - number: 11.1
 ---
 
-- TOC
-{:toc}
-
 ### Name
 
-The name of a type must end with the representation term "Type".
+The name of a type must end with the representation term `Type`.
 
 ### Parent
 
@@ -52,7 +49,7 @@ CCC types may only extend other CCC types.
 
 ### Default parent
 
-For a type that is not metadata, an association, or an augmentation, the default parent type if none other is provided should be `structures:ObjectType`.
+For a type that is not metadata, an association, or an augmentation, the default parent type, if none other is provided, should be `structures:ObjectType`.
 
 ### Sequence
 

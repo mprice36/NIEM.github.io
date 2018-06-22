@@ -3,9 +3,6 @@
   short: JSON
 ---
 
-- TOC
-{:toc}
-
 ## Instance example
 
 The example below shows element `nc:Vehicle`, which has a CCC type.  It contains an object with three properties.
@@ -57,7 +54,7 @@ Property `nc:VehicleIdentification` also has a CCC type, representing an identif
 ```
 
 {: .note}
-- In NIEM, `nc:VehicleType` extends `nc:ConveyanceType`.  This is captured by the `allOf` syntax above, which creates a reference to the parent type, then defines the vehicle-specific properties below.
+>In NIEM, `nc:VehicleType` extends `nc:ConveyanceType`.  This is captured by the `allOf` syntax above, which creates a reference to the parent type, then defines the vehicle-specific properties below.
 
 ## Schema template
 
@@ -89,4 +86,4 @@ Property `nc:VehicleIdentification` also has a CCC type, representing an identif
 ```
 
 {: .note}
-- Any attributes that CCC type contains should be represented the same way as elements, as properties under the JSON Schema `properties` key.
+>Any attributes that a CCC type contains should be represented the same way as elements, i.e., as properties under the JSON Schema `properties` key.

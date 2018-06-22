@@ -3,9 +3,6 @@
   short: XML
 ---
 
-- TOC
-{:toc}
-
 ## Instance example
 
 ```xml
@@ -61,6 +58,10 @@ This template shows the creation of a complex type with complex content.  It spe
 </xs:complexType>
 ```
 
-{: .note}
-- The cardinality on elements may be adjusted by changing the `minOccurs` and `maxOccurs` values.  NIEM reference schemas tend to be very flexible but cardinality should be adjusted in IEPDs to meet specific exchange requirements.
-- The cardinality on attributes may be adjusted by changing the `use` value from `optional` to `required`.
+{:.note}
+>
+>- The cardinality on elements may be adjusted by changing the `minOccurs`
+> and `maxOccurs` values.  NIEM reference schemas tend to be very flexible,
+> but cardinality should be adjusted in IEPDs to meet specific exchange requirements.
+>- The cardinality on attributes may be adjusted by changing the `use` value
+> from `optional` to `required`.

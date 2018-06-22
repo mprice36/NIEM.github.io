@@ -3,9 +3,6 @@
   short: XML
 ---
 
-- TOC
-{:toc}
-
 ## Instance example
 
 ```xml
@@ -28,8 +25,9 @@
 ```
 
 {: .note}
-- The CSC type extends a simple type.
-- The CSC type references an attribute group from `structures`.
+>
+>- The CSC type extends a simple type.
+>- The CSC type references an attribute group from `structures`.
 
 ## Schema template
 

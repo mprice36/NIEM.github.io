@@ -3,9 +3,6 @@
   short: Reference Table
 ---
 
-- TOC
-{:toc}
-
 The tables below pair property representation terms (primary and alternates) with the recommended definition standard opening phrases.
 
 ## Simple properties
